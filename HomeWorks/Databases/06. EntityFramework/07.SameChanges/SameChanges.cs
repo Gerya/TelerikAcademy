@@ -30,8 +30,9 @@ using Northwind.Model;
                 {
                     otherDataBase.Customers.Add(newCustmer);
                     otherDataBase.SaveChanges();
-                    Customer customer = dataBase.Customers.First(x => x.CustomerID == "KULO");
-                    dataBase.Customers.Remove(customer);
+                    //Customer customer = dataBase.Customers.First(x => x.CustomerID == "KULO");
+                    dataBase.Customers.Attach(newCustmer);
+                    dataBase.Customers.Remove(newCustmer);
                     dataBase.SaveChanges();
                 }
             }

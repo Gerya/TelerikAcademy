@@ -4,10 +4,18 @@ using System.Linq;
 using Northwind.Model;
 using System.Data.Linq;
 
-namespace Inherit
+namespace Northwind.Model
 {
-    public class EmployeeExtd : Employee
+    public partial class Employee
     {
-        public EntitySet<Territory> Teritory { get; set; }
+        public EntitySet<Territory> Teritory
+        { 
+            get
+        {
+               var teritotyes = new EntitySet<Territory>();
+               teritotyes.AddRange(this.Teritory);
+                return teritotyes;
+        }  
+        }
     }
 }

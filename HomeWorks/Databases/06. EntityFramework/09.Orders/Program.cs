@@ -1,9 +1,6 @@
-﻿using Northwind.Model;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Northwind.Model;
 
 namespace Orders
 {
@@ -37,7 +34,9 @@ namespace Orders
                     newOrder.ShipPostalCode = customer.PostalCode;
                     newOrder.ShipCountry = customer.Country;
                 }
-                
+
+                dataBase.Orders.Add(newOrder);
+                dataBase.Orders.Add(newOrder);
                 dataBase.Orders.Add(newOrder);
                 return dataBase.SaveChanges();
             }

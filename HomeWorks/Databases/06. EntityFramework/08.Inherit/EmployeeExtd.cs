@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Northwind.Model;
 using System.Data.Linq;
 
-namespace Northwind.Model
+namespace NorthwindTwin
 {
-    public partial class Employee
+    public partial class Inheritance
     {
-        public EntitySet<Territory> Teritory
-        { 
-            get
+        private static void Main(string[] args)
         {
-               var teritotyes = new EntitySet<Territory>();
-               teritotyes.AddRange(this.Teritory);
-                return teritotyes;
-        }  
+            using (var northwindDbContext = new NorthwindEntities())
+            {
+                foreach (var territory in northwindDbContext.Employees.First().TerritoriesSet)
+                {
+                    Console.WriteLine(territory);
+                }
+            }
         }
     }
 }

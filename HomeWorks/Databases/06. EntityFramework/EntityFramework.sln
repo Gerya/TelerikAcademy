@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.CreateDBTwin", "06.Creat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.SameChanges", "07.SameChanges\07.SameChanges.csproj", "{A905D4A4-B936-424E-876F-D8B3651694DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Inherit", "08.Inherit\08.Inherit.csproj", "{32B7B3BD-1709-491F-8EFA-4CED30CF6B3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Inheritance", "08.Inherit\08.Inheritance.csproj", "{32B7B3BD-1709-491F-8EFA-4CED30CF6B3E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Orders", "09.Orders\09.Orders.csproj", "{034EAAFE-FD1F-46B5-BCB6-688E687F1C80}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.UserGroupUtilities", "11.UserGroupUtilities\11.UserGroupUtilities.csproj", "{9B37D2C2-E762-4F37-B6B2-8A9FC99B7DDE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserRepository.Model", "UserRepository.Model\UserRepository.Model.csproj", "{27DD2EF3-0ADC-40AF-AB76-0C0BBF44F146}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.SQLServerProfiler", "12.SQLServerProfiler\12.SQLServerProfiler.csproj", "{5F6C3C5B-F234-4645-8EB6-6C326838654B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.SourceCodeEntityFramework", "13.SourceCodeEntityFramework\13.SourceCodeEntityFramework.csproj", "{D8D66CB2-084E-4431-94AA-31EB519FDD6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +65,14 @@ Global
 		{27DD2EF3-0ADC-40AF-AB76-0C0BBF44F146}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27DD2EF3-0ADC-40AF-AB76-0C0BBF44F146}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27DD2EF3-0ADC-40AF-AB76-0C0BBF44F146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F6C3C5B-F234-4645-8EB6-6C326838654B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F6C3C5B-F234-4645-8EB6-6C326838654B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F6C3C5B-F234-4645-8EB6-6C326838654B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F6C3C5B-F234-4645-8EB6-6C326838654B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D66CB2-084E-4431-94AA-31EB519FDD6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D66CB2-084E-4431-94AA-31EB519FDD6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D66CB2-084E-4431-94AA-31EB519FDD6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D66CB2-084E-4431-94AA-31EB519FDD6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

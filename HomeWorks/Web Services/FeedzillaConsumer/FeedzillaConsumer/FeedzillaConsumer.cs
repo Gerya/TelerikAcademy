@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 
@@ -6,23 +6,34 @@ namespace FeedzillaConsumer
 {
     internal class FeedzillaConsumer
     {
-        static async void PrintArticles(HttpClient httpClient, string queryString)
+        static async void GetArticles(HttpClient httpClient, string queryString)
         {
             var response = await httpClient.GetAsync(string.Format("v1/articles/search.json?q={0}", queryString));
-
             var articlesFound = response.Content.ReadAsStringAsync().Result;
-
             var data = JsonConvert.DeserializeObject<ArticlesCollection>(articlesFound);
-            
+
+            PrintArticles(data);
+        }
+
+        static async void GetArticles(HttpClient httpClient, string queryString, int count)
+        {
+            var response = await httpClient.GetAsync(string.Format("v1/articles/search.json?q={0}&count={1}", queryString, count));
+            var articlesFound = response.Content.ReadAsStringAsync().Result;
+            var data = JsonConvert.DeserializeObject<ArticlesCollection>(articlesFound);
+
+            PrintArticles(data);
+        }
+
+        static void PrintArticles(ArticlesCollection data)
+        {
             Console.WriteLine();
 
             foreach (var article in data.Articles)
             {
-                var newsArticle = JsonConvert.DeserializeObject<NewsArticle>(article.ToString());
                 Console.WriteLine(
                     "Title:\n{0}\nUrl:\n{1}\n",
-                    newsArticle.Title,
-                    newsArticle.Url);
+                    article.Title,
+                    article.Url);
             }
         }
 
@@ -34,8 +45,11 @@ namespace FeedzillaConsumer
             Console.WriteLine("Query String: ");
             string queryString = Console.ReadLine();
 
-            PrintArticles(httpClient, queryString);
-            Console.ReadLine();
+            //GetArticles(httpClient, queryString);
+            //System.Threading.Thread.Sleep(3000);
+
+            GetArticles(httpClient, queryString, 4);
+            System.Threading.Thread.Sleep(3000);
         }
     }
 }

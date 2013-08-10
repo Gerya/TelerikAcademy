@@ -1,0 +1,8 @@
+C:\Users\geri\Documents\SQL Server Management Studio\Projects\TelerikAcademy\HomeWorks\Web Services\FeedzillaConsumer\FeedzillaConsumer\bin\Debug\FeedzillaConsumer.exe.config
+C:\Users\geri\Documents\SQL Server Management Studio\Projects\TelerikAcademy\HomeWorks\Web Services\FeedzillaConsumer\FeedzillaConsumer\bin\Debug\FeedzillaConsumer.exe
+C:\Users\geri\Documents\SQL Server Management Studio\Projects\TelerikAcademy\HomeWorks\Web Services\FeedzillaConsumer\FeedzillaConsumer\bin\Debug\FeedzillaConsumer.pdb
+C:\Users\geri\Documents\SQL Server Management Studio\Projects\TelerikAcademy\HomeWorks\Web Services\FeedzillaConsumer\FeedzillaConsumer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\geri\Documents\SQL Server Management Studio\Projects\TelerikAcademy\HomeWorks\Web Services\FeedzillaConsumer\FeedzillaConsumer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\geri\Documents\SQL Server Management Studio\Projects\TelerikAcademy\HomeWorks\Web Services\FeedzillaConsumer\FeedzillaConsumer\obj\Debug\FeedzillaConsumer.csprojResolveAssemblyReference.cache
+C:\Users\geri\Documents\SQL Server Management Studio\Projects\TelerikAcademy\HomeWorks\Web Services\FeedzillaConsumer\FeedzillaConsumer\obj\Debug\FeedzillaConsumer.exe
+C:\Users\geri\Documents\SQL Server Management Studio\Projects\TelerikAcademy\HomeWorks\Web Services\FeedzillaConsumer\FeedzillaConsumer\obj\Debug\FeedzillaConsumer.pdb

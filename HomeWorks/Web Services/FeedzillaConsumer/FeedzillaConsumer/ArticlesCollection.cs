@@ -4,6 +4,6 @@ namespace FeedzillaConsumer
 {
     public class ArticlesCollection
     {
-        public IEnumerable<object> Articles { get; set; }
+        public IEnumerable<NewsArticle> Articles { get; set; }
     }
 }

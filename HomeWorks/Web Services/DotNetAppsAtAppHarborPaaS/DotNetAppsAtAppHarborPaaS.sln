@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeJewels.Models", "CodeJewels.Models\CodeJewels.Models.csproj", "{11F5D07A-FB89-454D-AFE2-1CB6325A7D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeJewels.Data", "CodeJewels.Data\CodeJewels.Data.csproj", "{055DDF5A-2772-4B14-860D-1B90EAA8B5B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeJewels.Service", "CodeJewels.Service\CodeJewels.Service.csproj", "{4A4A190F-E2BB-4F59-B1BC-B4F135D50534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Models", "Mailer.Models\Mailer.Models.csproj", "{5C626E11-58F5-4EC1-9F8B-80C9FAD97098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.Data", "Mailer.Data\Mailer.Data.csproj", "{C6B92A62-C0F3-49B0-8BC4-70546B3BAD6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mailer.ServiceHook", "Mailer.ServiceHook\Mailer.ServiceHook.csproj", "{E3852A7E-534B-4D9A-8A80-D1A7E679448F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{AC93D057-C091-43CF-97D2-C7BEE74FDAFD}"
+	ProjectSection(SolutionItems) = preProject
+		CodeJewels.Service\README.txt = CodeJewels.Service\README.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11F5D07A-FB89-454D-AFE2-1CB6325A7D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11F5D07A-FB89-454D-AFE2-1CB6325A7D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11F5D07A-FB89-454D-AFE2-1CB6325A7D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11F5D07A-FB89-454D-AFE2-1CB6325A7D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{055DDF5A-2772-4B14-860D-1B90EAA8B5B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055DDF5A-2772-4B14-860D-1B90EAA8B5B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055DDF5A-2772-4B14-860D-1B90EAA8B5B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055DDF5A-2772-4B14-860D-1B90EAA8B5B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4A190F-E2BB-4F59-B1BC-B4F135D50534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4A190F-E2BB-4F59-B1BC-B4F135D50534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4A190F-E2BB-4F59-B1BC-B4F135D50534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4A190F-E2BB-4F59-B1BC-B4F135D50534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C626E11-58F5-4EC1-9F8B-80C9FAD97098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C626E11-58F5-4EC1-9F8B-80C9FAD97098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C626E11-58F5-4EC1-9F8B-80C9FAD97098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C626E11-58F5-4EC1-9F8B-80C9FAD97098}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B92A62-C0F3-49B0-8BC4-70546B3BAD6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B92A62-C0F3-49B0-8BC4-70546B3BAD6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B92A62-C0F3-49B0-8BC4-70546B3BAD6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B92A62-C0F3-49B0-8BC4-70546B3BAD6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3852A7E-534B-4D9A-8A80-D1A7E679448F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3852A7E-534B-4D9A-8A80-D1A7E679448F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3852A7E-534B-4D9A-8A80-D1A7E679448F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3852A7E-534B-4D9A-8A80-D1A7E679448F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

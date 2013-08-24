@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sales>
+	<sale vendor="Nestle Sofia Corp.">
+		<summary date="1.12.2013 г. 00:00:00 ч." total-sum="19,92" />
+	</sale>
+	<sale vendor="Zagorka Corp.">
+		<summary date="1.12.2013 г. 00:00:00 ч." total-sum="9,96" />
+	</sale>
+	<sale vendor="Targovishte Corp." />
+	<sale vendor="Becks Corp." />
+	<sale vendor="Shumensko Corp." />
+	<sale vendor="Astica Corp." />
+	<sale vendor="Burgasko Corp." />
+	<sale vendor="Peshtera Corp.">
+		<summary date="1.12.2013 г. 00:00:00 ч." total-sum="6,00" />
+	</sale>
+	<sale vendor="Shugar Corp." />
+	<sale vendor="Bojur Corp." />
+	<sale vendor="Ivan Penev Corp." />
+	<sale vendor="Dimitar Tonev Corp." />
+	<sale vendor="Stoian Stavrev Corp." />
+	<sale vendor="Vegetables Kaloianovo Corp." />
+	<sale vendor="Alexander Sashev Corp." />
+	<sale vendor="Kaspichan frood Corp" />
+	<sale vendor="Ivailovo drinks Corp." />
+	<sale vendor="Coca-cola Corp." />
+	<sale vendor="Asen Asenov Corp." />
+	<sale vendor="Peter Petrov Corp.">
+		<summary date="1.12.2013 г. 00:00:00 ч." total-sum="12,00" />
+	</sale>
+</sales>

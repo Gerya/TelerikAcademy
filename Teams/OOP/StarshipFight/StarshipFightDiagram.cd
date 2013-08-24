@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StarshipFight.BonusStone">
+    <Position X="6" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BonusStone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.Collisions">
+    <Position X="10.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Collisions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.DynamicObject">
+    <Position X="6" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DynamicObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.Engine">
+    <Position X="8" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAUAAQAEEAAAAQAAAABQgAgACCAgAAAAQAAII=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.GameException">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.GameObjects">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAILAAAAAQAAAAIBQQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StarshipFight.Gun">
+    <Position X="4.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.IndestructibleStone">
+    <Position X="9" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IndestructibleStone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.KeyboardInterface" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAQAEAAEAAAAAAgAAAAAAAAAAAICAA=</HashCode>
+      <FileName>KeyboardInterface.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StarshipFight.LifeStone">
+    <Position X="6" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LifeStone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.ObjectDrawer" BaseTypeListCollapsed="true">
+    <Position X="12" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAgAAAIAAAAAAAAAAAAAABAAEQACAAA=</HashCode>
+      <FileName>ObjectDrawer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StarshipFight.StarshipFightMain">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>StarshipFightMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.Ship">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAIAABAAAAAAAAAQAAAAAAAAIQAAAAAAQAAA=</HashCode>
+      <FileName>Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StarshipFight.Stone">
+    <Position X="7.75" Y="8.25" Width="1.5" />
+    <InheritanceLine Type="StarshipFight.DynamicObject" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="6.675" />
+        <Point X="6.75" Y="7.625" />
+        <Point X="8.562" Y="7.625" />
+        <Point X="8.562" Y="8.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Stone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intro" Collapsed="true">
+    <Position X="12" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Intro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameOver" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameOver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Position">
+    <Position X="14" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Positions.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="StarshipFight.ICollidable" Collapsed="true">
+    <Position X="10.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICollidable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StarshipFight.IRenderer" Collapsed="true">
+    <Position X="13.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAAAA=</HashCode>
+      <FileName>IRenderer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="StarshipFight.IUserInterface" Collapsed="true">
+    <Position X="12.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAQAEAAEAAAAAAgAAAAAAAAAAAICAA=</HashCode>
+      <FileName>IUserInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="IRenderable" Collapsed="true">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IRenderable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="StarshipFight.StoneForm">
+    <Position X="10.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAEAAAAAAAAAAAQIEAAAAAAAAAAAAAAAAIACIAAACA=</HashCode>
+      <FileName>StoneForm.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

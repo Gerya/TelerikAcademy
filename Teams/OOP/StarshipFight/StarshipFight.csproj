@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8659AC5-0336-49B0-ACB0-4B52001D011B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StarshipFight</RootNamespace>
+    <AssemblyName>StarshipFight</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BonusStone.cs" />
+    <Compile Include="Collisions.cs" />
+    <Compile Include="DynamicObject.cs" />
+    <Compile Include="Engine.cs" />
+    <Compile Include="GameException.cs" />
+    <Compile Include="GameObject.cs" />
+    <Compile Include="GameOver.cs" />
+    <Compile Include="Gun.cs" />
+    <Compile Include="ICollidable.cs" />
+    <Compile Include="IndestructibleStone.cs" />
+    <Compile Include="Intro.cs" />
+    <Compile Include="IRenderable.cs" />
+    <Compile Include="IRenderer.cs" />
+    <Compile Include="IUserInterface.cs" />
+    <Compile Include="KeyboardInterface.cs" />
+    <Compile Include="LifeStone.cs" />
+    <Compile Include="ObjectDrawer.cs" />
+    <Compile Include="Positions.cs" />
+    <Compile Include="StarshipFightMain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ship.cs" />
+    <Compile Include="Stone.cs" />
+    <Compile Include="StoneForm.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="StarshipFightDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IntroPicFlames_1.txt" />
+    <Content Include="IntroPicFlames_2.txt" />
+    <Content Include="IntroPicMain.txt" />
+    <Content Include="IntroText1.txt" />
+    <Content Include="IntroText2.txt" />
+    <Content Include="GameOverText.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

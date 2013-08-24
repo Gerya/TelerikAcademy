@@ -1,0 +1,2 @@
+application: http://chat-teamwork.apphb.com/
+repository: https://github.com/gparlakov/chat-teamwork/tree/master/WS-Team-Work

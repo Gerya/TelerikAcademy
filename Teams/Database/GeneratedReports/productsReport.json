@@ -1,0 +1,359 @@
+[
+  {
+    "product-id": 1,
+    "product-name": "Chocolate \"Milka\"",
+    "vendor-name": "Nestle Sofia Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 2,
+    "product-name": "Chocolate \"Milka white\"",
+    "vendor-name": "Nestle Sofia Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 3,
+    "product-name": "Beer \"Zagorka\"",
+    "vendor-name": "Zagorka Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 4,
+    "product-name": "Vodka \"Targovishte\"",
+    "vendor-name": "Targovishte Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 5,
+    "product-name": "Beer \"Becks\"",
+    "vendor-name": "Becks Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 6,
+    "product-name": "Beer \"Shumensko\"",
+    "vendor-name": "Shumensko Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 7,
+    "product-name": "Beer \"Astica\"",
+    "vendor-name": "Astica Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 8,
+    "product-name": "Beer \"Burgasko\"",
+    "vendor-name": "Burgasko Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 9,
+    "product-name": "Red Wine \"Peshtera\"",
+    "vendor-name": "Peshtera Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 10,
+    "product-name": "White Wine \"Peshtera\"",
+    "vendor-name": "Peshtera Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 11,
+    "product-name": "Mavroud Wine \"Peshtera\"",
+    "vendor-name": "Peshtera Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 12,
+    "product-name": "Grape brandy \"Peshtera\",",
+    "vendor-name": "Peshtera Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 13,
+    "product-name": "Plum brandy \"Peshtera\"",
+    "vendor-name": "Peshtera Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 14,
+    "product-name": "Tic-Tac",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 15,
+    "product-name": "Chernomorec",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 16,
+    "product-name": "Holiday",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 17,
+    "product-name": "Lukche",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 18,
+    "product-name": "Shugar cock",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 19,
+    "product-name": "Shugar apple",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 20,
+    "product-name": "Ice juice",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 21,
+    "product-name": "Normal biscuits",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 22,
+    "product-name": "Normal Turkish delight",
+    "vendor-name": "Shugar Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 23,
+    "product-name": "Tomatos \"Bojur\"",
+    "vendor-name": "Bojur Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 24,
+    "product-name": "Cucumbers \"Bojur\"",
+    "vendor-name": "Bojur Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 25,
+    "product-name": "Cucumbers \"Ivan Penev\"",
+    "vendor-name": "Ivan Penev Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 26,
+    "product-name": "Carrots \"Ivan Penev\"",
+    "vendor-name": "Ivan Penev Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 27,
+    "product-name": "Tomatos \"Ivan Penev\"",
+    "vendor-name": "Ivan Penev Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 28,
+    "product-name": "Potatos \"Ivan Penev\"",
+    "vendor-name": "Ivan Penev Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 29,
+    "product-name": "Tomatos \"Dimitar Tonev\"",
+    "vendor-name": "Dimitar Tonev Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 30,
+    "product-name": "Plumbs \"Stoian Stavrev\"",
+    "vendor-name": "Stoian Stavrev Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 31,
+    "product-name": "Carrots \"Vegetables Kaloianovo\"",
+    "vendor-name": "Vegetables Kaloianovo Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 32,
+    "product-name": "Potatos \"Vegetables Kaloianovo\"",
+    "vendor-name": "Vegetables Kaloianovo Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 33,
+    "product-name": "Tomatos \"Vegetables Kaloianovo\"",
+    "vendor-name": "Vegetables Kaloianovo Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 34,
+    "product-name": "Cucumbers \"Vegetables Kaloianovo\"",
+    "vendor-name": "Vegetables Kaloianovo Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 35,
+    "product-name": "Potatos \"Alexander Sashev\"",
+    "vendor-name": "Alexander Sashev Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 36,
+    "product-name": "Carrots \"Kaspichan frood\"",
+    "vendor-name": "Kaspichan frood Corp",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 37,
+    "product-name": "Potaos \"Kaspichan frood\"",
+    "vendor-name": "Kaspichan frood Corp",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 38,
+    "product-name": "Tomatos \"Kaspichan frood\"",
+    "vendor-name": "Kaspichan frood Corp",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 39,
+    "product-name": "Racia \"Ivailovo drinks\"",
+    "vendor-name": "Ivailovo drinks Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 40,
+    "product-name": "Plumb Racia \"Ivailovo drinks\"",
+    "vendor-name": "Ivailovo drinks Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 41,
+    "product-name": "Mavroud wine\"Ivailovo drinks\"",
+    "vendor-name": "Ivailovo drinks Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 42,
+    "product-name": "White wine\"Ivailovo drinks\"",
+    "vendor-name": "Ivailovo drinks Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 43,
+    "product-name": "Beer \"Ivailovo\"",
+    "vendor-name": "Ivailovo drinks Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 44,
+    "product-name": "Bozzmeasuresa \"Ivailovo\"",
+    "vendor-name": "Ivailovo drinks Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 45,
+    "product-name": "Coca-cola",
+    "vendor-name": "Coca-cola Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 46,
+    "product-name": "Fanta",
+    "vendor-name": "Coca-cola Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 47,
+    "product-name": "Fanta orange",
+    "vendor-name": "Coca-cola Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 48,
+    "product-name": "Sprite",
+    "vendor-name": "Coca-cola Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 49,
+    "product-name": "Tomatos \"Asen Asenov\"",
+    "vendor-name": "Asen Asenov Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 50,
+    "product-name": "Chease \"Peter Petrov\"",
+    "vendor-name": "Peter Petrov Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  },
+  {
+    "product-id": 51,
+    "product-name": "Sosages \"Peter Petrov\"",
+    "vendor-name": "Peter Petrov Corp.",
+    "total-quantity-sold": 0,
+    "total-incomes": 0.0
+  }
+]

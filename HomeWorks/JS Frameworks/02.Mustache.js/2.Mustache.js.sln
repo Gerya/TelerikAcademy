@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsView.js", "2.Mustache.js\StudentsView.js.csproj", "{4926641F-504F-415F-84BF-2CC4CA6EA726}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentSystem.Model", "Students.Model\StudentSystem.Model.csproj", "{8834E63F-4C10-4BE4-AA46-11A67A00FDB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentSystem.WebApi", "StudentSystem.WebApi\StudentSystem.WebApi.csproj", "{95B16B08-DA7E-4F84-9113-FF955D69DF72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4926641F-504F-415F-84BF-2CC4CA6EA726}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4926641F-504F-415F-84BF-2CC4CA6EA726}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4926641F-504F-415F-84BF-2CC4CA6EA726}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4926641F-504F-415F-84BF-2CC4CA6EA726}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8834E63F-4C10-4BE4-AA46-11A67A00FDB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8834E63F-4C10-4BE4-AA46-11A67A00FDB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8834E63F-4C10-4BE4-AA46-11A67A00FDB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8834E63F-4C10-4BE4-AA46-11A67A00FDB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95B16B08-DA7E-4F84-9113-FF955D69DF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B16B08-DA7E-4F84-9113-FF955D69DF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B16B08-DA7E-4F84-9113-FF955D69DF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B16B08-DA7E-4F84-9113-FF955D69DF72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

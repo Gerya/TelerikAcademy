@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/ua-parser.js"></script>
+    <script src="Scripts/jquery-2.0.3.min.js"></script>
+    <script src="Scripts/modernizr-latest.js"></script>
+</head>
+<body>
+    <div id="browser-data"></div>
+    <div>
+        <table id="features">
+            <thead>
+                <tr>
+                    <th colspan="2">Test your browser for HTML5 support!</th>
+                </tr>
+                <tr>
+                    <th id="browser-name" colspan="2"></th>
+                </tr>
+                <tr>
+                    <th id="browser-version" colspan="2"></th>
+                </tr>
+                <tr>
+                    <th id="os" colspan="2"></th>
+                </tr>
+                <tr>
+                    <th id="device" colspan="2"></th>
+                </tr>
+                <tr>
+                    <th id="cpu-architecture" colspan="2"></th>
+                </tr>
+                <tr>
+                    <th>Feature</th>
+                    <th>Supported?</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        var parser = new UAParser();
+        var browserData = parser.getResult();
+        $("#browser-name").html("Browser name: " + browserData.browser.name);
+        $("#browser-version").append("Version: " + browserData.browser.version);
+        $("#os").append("OS: " + browserData.os.name + " " + browserData.os.version + "");
+        $("#device").append("Device: " + browserData.device.model + " " + browserData.device.type + " " + browserData.device.vendor);
+        $("#cpu-architecture").append("CPU architecture: " + browserData.cpu.architecture);
+
+        // Populate the #features table when the document is ready
+        jQuery(function ($) {
+            var target = $('#features > tbody');
+
+            var traverse = function (object, prefix) {
+                prefix = prefix ? prefix + '.' : '';
+
+                for (property in object) {
+                    if (typeof object[property] == 'object') {
+                        traverse(object[property], prefix + property);
+                    } else if (typeof object[property] == 'boolean') {
+                        var
+                            tr = $('<tr />'),
+                            name = $('<th />', {
+                                text: prefix + property
+                            }),
+                            value = $('<td />', {
+                                text: object[property] ? 'Yes' : 'Nope'
+                            });
+
+                        target.append(tr.append(name).append(value));
+                    }
+                }
+            };
+
+            traverse(Modernizr, 'Modernizr');
+        });
+
+    </script>
+</body>
+</html>

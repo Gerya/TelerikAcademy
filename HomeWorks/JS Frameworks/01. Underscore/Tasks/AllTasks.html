@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Underscore Tasks</title>
+    <script src="Scripts/class.js"></script>
+    <script src="Scripts/underscore.js"></script>
+</head>
+<body>
+    <script>
+        var Student = Class.create({
+            init: function (firstName, lastName, age, marks) {
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+                this.marks = marks;
+                return this;
+            },
+
+            getAverageMark: function () {
+                return _.reduce(this.marks, function (a, b) {
+                    return a + b;
+                }) / this.marks.length;
+            },
+
+            toString: function () {
+                return this.firstName +
+                    " " + this.lastName +
+                    "(age: " + this.age + "), avg: "
+                    + this.getAverageMark();
+            }
+        });
+
+        var students = [
+		  new Student("Doncho", "Minkov", 19, [4, 5, 5, 6, 6]),
+		  new Student("Joro", "Georgiev", 30, [6, 6, 3, 5]),
+		  new Student("Ivaylo", "Kenov", 20, [6, 5]),
+		  new Student("Niki", "Kostov", 50, [6, 4, 5, 5]),
+		  new Student("Svetlin", "Nakov", 16, [6, 6, 3]),
+		  new Student("Nikolay", "Georgiev", 16, [6, 6, 3]),
+		  new Student("Peter", "Kenov", 16, [6, 6, 3]),
+		  new Student("Tsvetan", "Nikolov", 16, [6, 6, 3]),
+		  new Student("Svetlin", "Petrov", 16, [6, 6, 3]),
+		  new Student("Doncho", "Nikolov", 16, [6, 6, 3]),
+		  new Student("Mila", "Todorova", 16, [6, 6, 3]),
+		  new Student("Doncho", "Nikolov", 16, [6, 6, 3]),
+		  new Student("Asya", "Georgieva", 47, [6, 5, 5, 3, 3]),
+		  new Student("Ina", "Dobrilova", 23, [6, 5, 5, 2, 6]),
+        ];
+
+        /* Task 1
+		  Write a method that from a given array of students 
+          finds all students whose first name is before its last name alphabetically. 
+          Print the students in descending order by full name. Use Underscore.js
+        */
+
+        //var sortedFilteredStudents = _.chain(students)
+        //    .filter(function (s) {
+        //    return s.firstName.localeCompare(s.lastName) < 0;
+        //    })
+        //    .sortBy(function (s) {
+        //        return s.toString();
+        //    })
+        //    .value().reverse();
+
+        //console.log(_.sortBy(["Bob", "Mary", "Alice"], function (name) {
+        //    return String.fromCharCode.apply(String, _.map(name.split(''), function (c) {
+        //        return 0xffff - c.charCodeAt(0);
+        //    }));
+        //}))
+
+        //console.log(sortedFilteredStudents.join(", "));
+
+        /* Task 2
+        Write function that finds the first name and last name of all students 
+        with age between 18 and 24. Use Underscore.js
+        */
+
+        //var youngStudents = _.filter(students, function (s) {
+        //    return 18 <= s.age && s.age <= 24;
+        //});
+
+        //console.log(youngStudents.join(", "));
+
+        /* Task 3
+        Write a function that by a given array of students finds the student with highest marks.
+        */
+        //var bestStudent = _.max(students, function (s) {
+        //    return s.getAverageMark();
+        //});
+
+        //console.log(bestStudent.toString());
+
+        /* Task 4
+        Write a function that by a given array of animals, 
+        groups them by species and sorts them by number of legs.
+        */
+        var Animal = Class.create({
+            init: function (animalClass, species, legsCount) {
+                this.animalClass = animalClass;
+                this.species = species;
+                this.legsCount = legsCount;
+                return this;
+            },
+
+            toString: function () {
+                return "class: " + this.animalClass +
+                    " species: " + this.species;
+            }
+        });
+
+        var animals = [
+		  new Animal("Amphibia", "frog", 4),
+		  new Animal("Amphibia", "Siphonops paulensis", 0),
+		  new Animal("Amphibia", "Diplocaulus", 0),
+		  new Animal("Amphibia", "Northwestern salamander", 4),
+		  new Animal("Diplopoda", "Millipede", 36),
+		  new Animal("Diplopoda", "Scutigera coleoptrata", 30),
+		  new Animal("Diplopoda", "Lithobius forficatus", 300),
+		  new Animal("Diplopoda", "Tachypodoiulus niger", 200),
+		  new Animal("Mammalia", "Goat", 4),
+		  new Animal("Mammalia", "Whale", 0),
+		  new Animal("Mammalia", "Monkey", 2),
+		  new Animal("Mammalia", "Human", 2),
+		  new Animal("Reptilia", "Sand Lizard", 4),
+		  new Animal("Reptilia", "Snake", 0),
+		  new Animal("Reptilia", "Crocodile", 4)
+        ];
+
+        // I solution
+        //var animalsGroupedAndSorted = {};
+
+        //var groupedBySpecies = _.groupBy(animals, "animalClass");
+        //_.each(groupedBySpecies, function (group, key) {
+        //    var groupSorted = _.sortBy(group, "legsCount");
+        //    animalsGroupedAndSorted[key] = groupSorted;
+        //});
+
+        //for (var animalClass in animalsGroupedAndSorted) {
+        //    console.log(animalClass + ":");
+        //    console.log(_.pluck(animalsGroupedAndSorted[animalClass], "species").join(", "));
+        //}
+
+        // II solution
+        //var groupedBySpecies = _.map(_.groupBy(animals, "animalClass"), function (group) {
+        //    return _.sortBy(group, "legsCount");
+        //});
+
+        //for (var i = 0; i < groupedBySpecies.length; i++) {
+        //    console.log(groupedBySpecies[i][0].animalClass);
+        //    console.log(groupedBySpecies[i].join(", "));
+        //}
+
+        /*Task 5
+        By a given array of animals, find the total number of legs.
+        Each animal can have 2, 4, 6, 8 or 100 legs.
+        */
+        // I solution
+        //var legsTotal = _.chain(animals).map(function (a) {
+        //    return a.legsCount;
+        //}).reduce(function (a, b) {
+        //    return a + b;
+        //}).value();
+
+        // II solution
+        //var legsTotal = _.chain(animals).pluck("legsCount").reduce(function (a, b) {
+        //    return a + b;
+        //}).value();
+
+        //console.log("Total legs: " + legsTotal);
+
+        /*Task 6
+        By a given collection of books, find the most popular author (the author with the biggest number of books)
+        */
+
+        var Book = Class.create({
+            init: function (title, author) {
+                this.title = title;
+                this.author = author;
+                return this;
+            },
+
+            toString: function () {
+                return "title: " + this.title + " author: " + this.author;
+            }
+        });
+
+        var books = [
+            new Book("Leviathan", "Thomas Hobbes"),
+		    new Book("Ethics", "Baruch de Spinoza"),
+		    new Book("Mathematical Principles of Natural Philosophy", "Isaac Newton"),
+		    new Book("The Prince", "Niccolò Machiavelli"),
+		    new Book("Discourses on Livy", "Niccolò Machiavelli"),
+		    new Book("Candide", "Voltaire"),
+		    new Book("Essay on the Customs and the Spirit of the Nations", "Voltaire"),
+		    new Book("The Maid of Orleans", "Voltaire"),
+		    new Book("The Man of Forty Pieces of Silver", "Voltaire"),
+		    new Book("Treatise on Tolerance", "Voltaire"),
+		    new Book("Dictionnaire philosophique", "Voltaire"),
+		    new Book("War and Peace", "Leo Tolstoy"),
+		    new Book("Anna Karenina", "Leo Tolstoy"),
+		    new Book("Hadji Murat", "Leo Tolstoy"),
+		    new Book("The Cossacks", "Leo Tolstoy")
+        ];
+
+        // I solution
+        //var authorData = _.chain(books).countBy("author").invert().value();
+
+        //var maxBooks = -1;
+        //for (var key in authorData) {
+        //    if (key > max) {
+        //        max = key;
+        //    }
+        //}
+
+        //console.log(maxBooks);
+
+        // II solution
+        //var maxBooksAuthor = _.max(_.groupBy(books, "author"), function (books) {
+        //    return books.length;
+        //});
+        //console.log(maxBooksAuthor[0].author + ": " + maxBooksAuthor.length + " books");
+
+        /*task 7
+        By an array of people find the most common first and last name. Use underscore.
+        */
+
+        var maxOccurringFirstName = _.max(_.groupBy(students, "firstName"), function (students) {
+            return students.length;
+        });
+        console.log(maxOccurringFirstName[0].firstName + ": " + maxOccurringFirstName.length + " times");
+
+        var maxOccurringLastName = _.max(_.groupBy(students, "lastName"), function (students) {
+            return students.length;
+        });
+        console.log(maxOccurringLastName[0].lastName + ": " + maxOccurringFirstName.length + " times");
+    </script>
+</body>
+</html>

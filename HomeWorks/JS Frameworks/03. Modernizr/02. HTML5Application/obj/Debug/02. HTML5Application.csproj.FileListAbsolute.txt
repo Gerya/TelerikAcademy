@@ -1,0 +1,5 @@
+c:\users\student\documents\visual studio 2012\Projects\3. Modernizr\02. HTML5Application\bin\_02.HTML5Application.dll
+c:\users\student\documents\visual studio 2012\Projects\3. Modernizr\02. HTML5Application\bin\_02.HTML5Application.pdb
+c:\users\student\documents\visual studio 2012\Projects\3. Modernizr\02. HTML5Application\obj\Debug\_02.HTML5Application.dll
+c:\users\student\documents\visual studio 2012\Projects\3. Modernizr\02. HTML5Application\obj\Debug\_02.HTML5Application.pdb
+C:\Users\student\Documents\Visual Studio 2012\Projects\3. Modernizr\02. HTML5Application\obj\Debug\02. HTML5Application.csprojResolveAssemblyReference.cache

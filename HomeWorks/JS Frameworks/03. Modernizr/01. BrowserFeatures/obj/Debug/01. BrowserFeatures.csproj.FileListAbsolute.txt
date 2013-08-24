@@ -1,0 +1,4 @@
+c:\users\student\documents\visual studio 2012\Projects\3. Modernizr\01. BrowserFeatures\bin\_01.BrowserFeatures.dll
+c:\users\student\documents\visual studio 2012\Projects\3. Modernizr\01. BrowserFeatures\bin\_01.BrowserFeatures.pdb
+c:\users\student\documents\visual studio 2012\Projects\3. Modernizr\01. BrowserFeatures\obj\Debug\_01.BrowserFeatures.dll
+c:\users\student\documents\visual studio 2012\Projects\3. Modernizr\01. BrowserFeatures\obj\Debug\_01.BrowserFeatures.pdb

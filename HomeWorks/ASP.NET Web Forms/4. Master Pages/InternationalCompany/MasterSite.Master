@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterSite.master.cs" Inherits="InternationalCompany.MasterSite" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Glass+Antiqua' rel='stylesheet' type='text/css'/>
+    <link href="style.css" rel="stylesheet" />
+    <%--    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>--%>
+</head>
+<body>
+    <div id="wrapper">
+        <form id="formMain" runat="server">
+            <header class="clearfix">
+                <div id="logo"></div>
+                <h1>Yoda Company</h1>
+            </header>
+            <div id="content" class="clearfix">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer>
+                (c) 2013 by Yoda Corp. 
+            </footer>
+        </form>
+    </div>
+</body>
+</html>

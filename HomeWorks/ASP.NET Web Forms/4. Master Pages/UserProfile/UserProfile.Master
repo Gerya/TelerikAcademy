@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.master.cs" Inherits="UserProfile.UserProfile" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>User Profile</title>
+    <link href='http://fonts.googleapis.com/css?family=Quintessential' rel='stylesheet' type='text/css'/>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <form id="formMain" runat="server" class="clearfix">
+            <header>
+                <asp:ContentPlaceHolder ID="ContentPlaceHeader" runat="server">
+                </asp:ContentPlaceHolder>
+            </header>
+            <aside>
+                <nav>
+                    <ul id="navigation">
+                        <li><a href="~/" runat="server">Home</a>
+                        </li>
+                        <li><a href="~/PersonalInfo.aspx" runat="server">Info</a>
+                        </li>
+                        <li><a href="~/Friends.aspx" runat="server">Friends</a>
+                        </li>
+                        <li><a href="AdditionalInfo.aspx" runat="server">Additional info</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <div id="section">
+                <asp:ContentPlaceHolder ID="MainContainer" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+        <footer>
+            (c) 2013 by Yoda Corp. 
+        </footer>
+    </div>
+</body>
+</html>

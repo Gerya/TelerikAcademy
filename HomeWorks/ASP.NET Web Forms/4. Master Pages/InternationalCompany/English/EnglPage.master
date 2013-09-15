@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterSite.Master" AutoEventWireup="true" CodeBehind="EnglPage.master.cs" Inherits="InternationalCompany.English.NestedMasterPage1" %>
+
+<asp:Content ID="EnglContainer" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
+    <aside class="sidebar">
+        <ul  class="navigation clearfix">
+            <li><a href="EngHome.aspx">Home</a></li>
+            <li><a href="EngAbout.aspx">About</a></li>
+            <li><a href="EngContacts.aspx">Contacts</a></li>
+            <li><a href="/">Choose language</a></li>
+            
+        </ul>
+    </aside>
+    <div class="content"> 
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderEngArea" runat="server" />
+    </div>
+</asp:Content>

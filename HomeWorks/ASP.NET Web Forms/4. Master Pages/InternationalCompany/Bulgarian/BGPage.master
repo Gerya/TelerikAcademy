@@ -1,0 +1,14 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterSite.Master" AutoEventWireup="true" CodeBehind="BGPage.master.cs" %>
+<asp:Content ID="BGContainer" ContentPlaceHolderID="ContentPlaceHolderMain" runat="server">
+    <aside class="bg-sidebar">
+        <ul class="navigation clearfix">
+            <li><a href="BGHome.aspx">Начало</a></li>
+            <li><a href="BGAbout.aspx">За нас</a></li>
+            <li><a href="BGContacts.aspx">Контакти</a></li>
+            <li><a href="/">Избери език</a></li>
+        </ul>
+    </aside>
+    <div class="content"> 
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderBGArea" runat="server" />
+    </div>
+</asp:Content>

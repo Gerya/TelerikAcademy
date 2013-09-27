@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20617.1 PREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCalculator", "WebCalculator\WebCalculator.csproj", "{5921406E-0080-496C-83B6-C06226870A44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore", "BookStore\BookStore.csproj", "{57F22A15-1ABD-426E-89BF-8DEEBF26645D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdminRouteConstraint", "AdminRouteConstraint\AdminRouteConstraint.csproj", "{33E853D9-4697-41D0-8344-C254A8F68462}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F086D589-D22F-4435-89BF-F47CF81969A3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5921406E-0080-496C-83B6-C06226870A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5921406E-0080-496C-83B6-C06226870A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5921406E-0080-496C-83B6-C06226870A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5921406E-0080-496C-83B6-C06226870A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57F22A15-1ABD-426E-89BF-8DEEBF26645D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57F22A15-1ABD-426E-89BF-8DEEBF26645D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57F22A15-1ABD-426E-89BF-8DEEBF26645D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57F22A15-1ABD-426E-89BF-8DEEBF26645D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E853D9-4697-41D0-8344-C254A8F68462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E853D9-4697-41D0-8344-C254A8F68462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E853D9-4697-41D0-8344-C254A8F68462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E853D9-4697-41D0-8344-C254A8F68462}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cc06e3b245f7436491af5d2bf5d692d2" Name="Diagram1">
+        <EntityTypeShape EntityType="MoviesDbModel.Actor" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoviesDbModel.Actress" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoviesDbModel.Director" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoviesDbModel.Movie" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MoviesDbModel.Studio" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <AssociationConnector Association="MoviesDbModel.FK_Movies_Actors" ManuallyRouted="false" />
+        <AssociationConnector Association="MoviesDbModel.FK_Movies_Actresses" ManuallyRouted="false" />
+        <AssociationConnector Association="MoviesDbModel.FK_Movies_Directors" ManuallyRouted="false" />
+        <AssociationConnector Association="MoviesDbModel.FK_Movies_Studios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

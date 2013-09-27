@@ -1,0 +1,61 @@
+@using MovieStore.Models
+@model IEnumerable<MovieViewModel>
+
+@{
+    ViewBag.Title = "Movies";
+}
+
+<h2>Movies</h2>
+
+<table class="table table-striped table-condensed">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Leading actor</th>
+            <th>Leading actress</th>
+            <th>Studio</th>
+        </tr>
+    </thead>
+
+    @foreach (var movie in Model)
+    {
+        <tr>
+            <td>@movie.Title</td>
+            <td>@movie.Year</td>
+            <td>@movie.DirectorName</td>
+            <td>@(string.IsNullOrWhiteSpace(movie.LeadingActorName) ? "No leading actor" : movie.LeadingActorName)</td>
+            <td>@(string.IsNullOrWhiteSpace(movie.LeadingActressName) ? "No leading actress" : movie.LeadingActressName)</td>
+            <td>@movie.StudioName</td>
+            <td>
+                @Ajax.ActionLink("Edit...", "Edit", "Movies", movie, 
+                new AjaxOptions
+                {
+                    HttpMethod = "POST",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "update-form"
+                })
+            </td>
+            <td>
+                @Ajax.ActionLink("Delete...", "Delete", "Movies", movie, 
+                new AjaxOptions
+                {
+                    HttpMethod = "POST",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "delete-form"
+                })
+            </td>
+        </tr>
+    }
+
+</table>
+@Ajax.ActionLink("Create", "Create", "Movies",null,
+                new AjaxOptions
+                {
+                    HttpMethod = "GET",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "update-form",
+                })
+<div id="update-form"></div>
+<div id="delete-form"></div>

@@ -1,0 +1,101 @@
+﻿@model MovieStore.Models.MovieViewModel
+
+
+@using (Ajax.BeginForm(
+    "Create",
+    "Movies",
+    new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnBegin = "onValidate",
+        OnSuccess = "reloadPage"
+
+    },
+    new { id = "formCreateMovie" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>MovieViewModel</legend>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Title, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Year, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Year)
+                @Html.ValidationMessageFor(model => model.Year, null, new { @class = "help-inline" })
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.LeadingActorName, new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownListFor(a => a.LeadingActorName, Model.Actors)
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.LeadingActressName, new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownListFor(a => a.LeadingActressName, Model.Actresses)
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.DirectorName, new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownListFor(a => a.DirectorName, Model.Directors)
+            </div>
+        </div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.StudioName, new { @class = "control-label" })
+            <div class="controls">
+                @Html.DropDownListFor(a => a.StudioName, Model.Studios)
+            </div>
+        </div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Create" class="btn" />
+            <input type="button" value="Cancel" onclick="closeEditForm()" class="btn" />
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<script>
+    function reloadPage() {
+        $('#update-form').html("");
+        window.location = "/Movies";
+    }
+
+    function closeEditForm() {
+        $('#update-form').html("");
+    }
+
+    var onValidate = function (e) {
+        $.validator.unobtrusive.parse($("#formCreateMovie"));
+        var isValid = $("#formCreateMovie").valid();
+        if (!isValid) {
+            e.abort();
+
+        } else {
+            alert("Created");
+        }
+    };
+</script>
+

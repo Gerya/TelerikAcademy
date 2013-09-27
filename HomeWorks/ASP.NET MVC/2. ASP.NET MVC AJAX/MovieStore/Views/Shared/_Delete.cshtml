@@ -1,0 +1,63 @@
+@model MovieStore.Models.MovieViewModel
+
+@using (Ajax.BeginForm(
+    "ConfirmDelete",
+    "Movies",
+    new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnBegin = "onValidate",
+        OnSuccess = "reloadPage"
+
+    },
+    new { id = "formDeleteMovie" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Delete movie</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="control-group">
+            <p>Do you really want to delete @(Model.Title)?</p>
+        </div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn" />
+            <input type="button" value="Cancel" onclick="closeDeleteForm()" class="btn" />
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    function reloadPage() {
+        $('#delete-form').html("");
+        window.location = "/Movies";
+    }
+
+    function closeDeleteForm() {
+        $('#delete-form').html("");
+    }
+
+    var onValidate = function () {
+        $.validator.unobtrusive.parse($("#formDeleteMovie"));
+        var isValid = $("#formDeleteMovie").valid();
+        if (!isValid) {
+            e.abort();
+
+        } else {
+            alert("Movie deleted successfully.");
+        }
+    };
+</script>
+

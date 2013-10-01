@@ -1,0 +1,13 @@
+﻿@using Kendo.Mvc.UI
+@model IEnumerable<TreeViewItemModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="hero-unit">
+    <h2>Library System</h2>
+</div>
+    @(Html.Kendo()
+    .TreeView().Animation(true)
+    .Name("tree-view")
+    .BindTo(Model))

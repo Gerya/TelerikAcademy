@@ -1,0 +1,103 @@
+﻿@model IQueryable<LibrarySystem.Models.BookViewModel>
+@{
+    ViewBag.Title = "Books";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    <span id="undo" class="k-button">Create book</span>
+</p>
+@(Html.Kendo().Grid(Model)
+    .Name("BookGrid")
+    .Columns(columns =>
+    {
+        columns.Bound(b => b.Title);
+        columns.Bound(b => b.Author);
+        columns.Bound(b => b.ISBN);
+        columns.Bound(b => b.WebSite);
+        columns.Bound(b => b.Category).ClientTemplate("#=Category.Name#").EditorTemplateName("CategoryEditor").HtmlAttributes(new { @class = "dropDown" });
+        columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+    })
+    .Pageable()
+    .Sortable()
+    .ClientDetailTemplateId("template")
+    .Editable(e => e.Mode(GridEditMode.InLine))
+    .Filterable()
+    .DataSource(dataSource => dataSource
+            .Ajax()
+            .Events(events => events.Error("error_handler"))
+            .Model(model =>
+            {
+                model.Id(b => b.Id);
+                model.Field(b => b.Id).Editable(false);
+            })
+            .PageSize(10)
+            .Read(read => read.Action("Read", "Book"))
+            .Update(update => update.Action("Update", "Book"))
+            .Destroy(destroy => destroy.Action("Delete", "Book"))
+            )
+            //.Events(ev => ev.DataBound("dataBound"))
+)
+
+@(Html.Kendo().Window()
+    .Name("create")
+    .Title("Create new book").LoadContentFrom("CreateForm", "Book")
+    .Draggable()
+    .Resizable().Visible(false)
+    .Width(600).Position(x => { x.Top(200); x.Left(300); })
+    .Actions(actions => actions.Close())
+)
+
+<script id="template" type="text/kendo-tmpl">
+    @(Html.Kendo().TabStrip()
+            .Name("tabStrip_#=Id#")
+            .SelectedIndex(0)
+            .Animation(animation => animation.Open(open => open.Fade(FadeDirection.In)))
+            .Items(items =>
+            {
+                items.Add().Text("Details").Content(
+                    "<div class='book-details'>" +
+                        "<ul>" +
+                            "<li><label>Title:</label>#= Title #</li>" +
+                            "<li><label>Author:</label>#= Category.Name #</li>" +
+                            "<li><label>Category:</label>#= Author #</li>" +
+                            "<li><label>ISBN:</label>#= ISBN #</li>" +
+                            "<li><label>WebSite:</label>#= WebSite #</li>" +
+                        "</ul>" +
+                    "</div>"
+                );
+                items.Add().Text("Description").Content(
+                    "<div class='book-details'>" +
+                        "<p>" +
+                            "<label>Description:</label>#= Description #" +
+                          "</p>"
+                );
+
+            })
+            .ToClientTemplate())
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#undo").bind("click", function () {
+            $("#create").data("kendoWindow").open();
+        });
+    });
+    function error_handler(e) {
+        if (e.errors) {
+            var message = "Errors:\n";
+            $.each(e.errors, function (key, value) {
+                if ('errors' in value) {
+                    $.each(value.errors, function () {
+                        message += this + "\n";
+                    });
+                }
+            });
+            alert(message);
+        }
+    }
+    //function dataBound() {
+    //    this.expandRow(this.tbody.find("tr.k-master-row").first());
+    //}
+</script>

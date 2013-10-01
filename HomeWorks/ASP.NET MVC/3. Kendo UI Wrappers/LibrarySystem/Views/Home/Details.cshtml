@@ -1,0 +1,18 @@
+﻿@model Book
+@{
+    ViewBag.Title = "Details";
+}
+<hgroup class="hero-unit">
+    <h2>@ViewBag.Title</h2>
+</hgroup>
+<div class="row-fluid">
+    <div class="span12">
+        <h3>@Model.Title</h3>
+        <h4>Author: @Model.Author</h4>
+        <p>
+            <span>ISBN: @Model.ISBN</span><br />
+            <span>Website: @Model.WebSite</span>
+        </p>
+        <p>Description: @Model.Description</p>
+    </div>
+</div>

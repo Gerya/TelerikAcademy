@@ -1,0 +1,105 @@
+﻿@model LibrarySystem.Models.BookViewModel
+
+@{
+    ViewBag.Title = "Create book";
+}
+
+@using (Ajax.BeginForm(
+    "Create",
+    "Book",
+    new AjaxOptions
+    {
+        HttpMethod = "POST",
+        OnBegin = "onValidate",
+        OnSuccess = "closeForm"
+
+    },
+    new { id = "formCreateBook" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Book</legend>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Title, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Title)
+                @Html.ValidationMessageFor(model => model.Title, null, new { @class = "help-inline" })
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.Author, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Author)
+                @Html.ValidationMessageFor(model => model.Author, null, new { @class = "help-inline" })
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.WebSite, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.WebSite)
+                @Html.ValidationMessageFor(model => model.WebSite, null, new { @class = "help-inline" })
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.ISBN, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.ISBN)
+                @Html.ValidationMessageFor(model => model.ISBN, null, new { @class = "help-inline" })
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.Description, new { @class = "control-label" })
+            <div class="controls">
+                @Html.EditorFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description, null, new { @class = "help-inline" })
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.LabelFor(model => model.Category, new { @class = "control-label" })
+            <div class="controls">
+                @(Html.Kendo().DropDownList()
+                .Name("Category") // Name of the widget should be the same as the name of the property
+                .DataValueField("Id") // The value of the dropdown is taken from the EmployeeID property
+                .DataTextField("Name") // The text of the items is taken from the EmployeeName property
+                .DataSource(source =>
+                {
+                    source.Read(read =>
+                    {
+                        read.Action("GetCategory", "Book");
+                    });
+                })
+                // A list of all employees which is populated in the controller
+                )
+            </div>
+        </div>
+        <div class="form-actions no-color">
+            <input type="submit" value="Create" class="k-button" />
+        </div>
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<script>
+    function closeForm() {
+        var kendoWindow = $("#create").data("kendoWindow");
+        kendoWindow.close();
+        kendoWindow.refresh();
+        window.location = "/Book";
+    }
+    var onValidate = function (e) {
+        $.validator.unobtrusive.parse($("#formCreateBook"));
+        var isValid = $("#formCreateBook").valid();
+        if (!isValid) {
+            e.abort();
+
+        } else {
+            alert("Created");
+        }
+    };
+</script>

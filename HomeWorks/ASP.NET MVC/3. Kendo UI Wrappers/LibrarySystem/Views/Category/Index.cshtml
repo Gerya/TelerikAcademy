@@ -1,0 +1,90 @@
+﻿@model IQueryable<LibrarySystem.Models.CategoryViewModel>
+
+@{
+    ViewBag.Title = "Category";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@(Html.Kendo().Grid(Model)
+    .Name("Grid")
+    .Columns(columns =>
+    {
+        columns.Bound(c => c.Id).Hidden(true);
+        columns.Bound(c => c.Name).Sortable(true);
+        columns.Command(c => { c.Custom("Edit").DataRouteValues(x => x.Add("id").RouteKey("Id")).Action("Edit", "Category"); c.Custom("Delete").Click("showDetails"); })
+            .Width(160);
+        //columns.Bound(c => c.Id).Title("")
+        //    .ClientTemplate("<a href='" + Url.Content("~/Category/Edit/") + "#= Id #' class='k-button k-button-icontext'>Edit</a>");
+        //columns.Command(command => command.Custom("Delete").Click("showDetails"));
+    })
+    .Pageable()
+    .Sortable()
+    .Filterable()
+        @*.DataSource(dataSource => dataSource
+            .Ajax()
+            .Model( m => m.Id(c=> c.Id))
+            .Read(read => read.Action("Category_Read", "Category"))
+            .Destroy(delete => delete.Action("Delete", "Category"))
+        )*@
+)
+
+@(Html.Kendo().Window().Name("Delete")
+    .Title("Confirm delete")
+    .Visible(false)
+    .Modal(true)
+    .Draggable(true)
+    .Width(300)
+)
+
+<script type="text/x-kendo-template" id="template">
+    <div id="details-container">
+        <h4>Are you sure?</h4>
+        <a href="/Category/Delete/#=Id#" class="k-button k-button-icontext">Yes</a>
+        <a href="/Category" class=" k-button k-button-icontext">No</a>
+    </div>
+</script>
+
+<script type="text/javascript">
+    var detailsTemplate = kendo.template($("#template").html());
+
+    function showDetails(e) {
+        e.preventDefault();
+
+        var dataItem = ($(e.currentTarget).closest("tr"));
+        dataItem.Id = dataItem.children().first().text()
+        var wnd = $("#Delete").data("kendoWindow");
+
+        wnd.content(detailsTemplate(dataItem));
+        wnd.center().open();
+    }
+</script>
+
+
+
+@*<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+
+    </table>*@

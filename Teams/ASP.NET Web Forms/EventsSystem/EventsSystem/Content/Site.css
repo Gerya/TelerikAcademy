@@ -1,0 +1,67 @@
+﻿body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+h2,h3,h4
+{
+    font-family: 'Jacques Francois', serif;
+}
+h3
+{
+    font-style:oblique;
+}
+h4
+{
+    font-style:italic;
+}
+/* styles for removing the background from form */
+.no-color {
+  background-color: white;
+  border-style:none;
+}
+
+td, th {
+    padding: 5px;
+    border-style: dotted;
+}
+
+th {
+    background-color: #eee;
+}
+
+div.span4 {
+    min-height: 150px;
+}
+
+.allEventsGrid {
+    margin-top: 40px;
+}
+
+ul.joinedUsers li{
+    list-style: none;
+    font-weight: bold;
+}
+
+.joinEventTitle {
+    margin-top: 50px;
+}
+
+#SiteMapPathBreadcrumb {
+    display: none;
+}
+
+.createEventButton {
+    margin-top: 20px;
+}
+
+.createEventForm {
+    margin-top: 20px;
+}
+
+#SiteMapPathBreadcrumb {
+    display: none;
+}
+.mainMenu > ul > li {
+    margin:5px;
+    font-weight:bold;
+}

@@ -1,0 +1,22 @@
+﻿body {
+}
+
+.container {
+  margin-top: 50px;
+}
+
+#SiteMapPathBreadcrumb {
+  display: inline-block;
+  margin-top: 100px;
+  background: #f8f8f8;
+  padding: 5px;
+}
+
+#container {
+  margin-top: 100px;
+}
+
+li {
+  padding: 5px;
+  background: #f8f8f8;
+}

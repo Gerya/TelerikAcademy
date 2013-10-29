@@ -1,4 +1,0 @@
-TelerikAcademy
-==============
-
-Homeworks

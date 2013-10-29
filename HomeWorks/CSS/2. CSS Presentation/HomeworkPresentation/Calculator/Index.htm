@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+<!-- base element -->
+	<div id="base">
+		<div id="caption">
+			<div id="widowsName">
+				<img src="Images/Calculator_Vista_Icon.png" alt="calculator" id="icon">
+				<span>Calculator</span>
+			</div>
+			<ul id="windowControlButtons" class="clearfix">
+				<li>
+					<button id="minimize" title="Minimize">_</button>
+				</li>
+				<li>
+					<button id="maximize" disabled>[]</button>
+				</li>
+				<li>
+					<button id="close" title="Close">X</button>
+				</li>
+			</ul>
+		</div>
+		<div id="menu">
+			<ul>
+				<li>
+					<span class="singleUnder">V</span>iew
+				</li>
+				<li>
+					<span class="singleUnder">E</span>dit
+				</li>
+				<li>
+					<span class="singleUnder">H</span>elp
+				</li>
+			</ul>
+		</div>
+		<div id="body">
+			<div id="screen">
+				<form>
+					<input type="text" value="1098" maxlength="16" dir="rtl">
+				</form>
+			</div>
+			<div id="binaryNumbers">
+				<ul id="firstRow" class="clearfix">
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+				</ul>
+				<ul id="secondRow" class="clearfix">
+				<li>
+				63
+				</li>
+				<li>
+				47
+				</li>
+				<li>
+				32
+				</li>
+				</ul>
+				<ul id= "thirdRow" class="clearfix">
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0000
+					</li>
+					<li>
+					0100
+					</li>
+					<li>
+					1101
+					</li>
+					<li>
+					0010
+					</li>
+				</ul>
+				<ul id="fourthRow" class="clearfix">
+				<li>
+				31
+				</li>
+				<li>
+				15
+				</li>
+				<li>
+				0
+				</li>
+				</ul>
+			</div>
+			<div id="calculatorButtons">
+				<div id="numbers" class="clearfix">
+					<div class="row">
+						<button class="button disabled">&nbsp;</button>
+						<button class="button enable smallerFont">Mod</button>
+						<button class="button disabled largerFont">A</button>
+						<button class="button enable">MC</button>
+						<button class="button enable">MR</button>
+						<button class="button enable">MS</button>
+						<button class="button enable">M+</button>
+						<button class="button enable">M-</button>
+					</div>
+					<div class="row">
+						<button class="button enable smallerFont">(</button>
+						<button class="button enable smallerFont">)</button>
+						<button class="button disabled largerFont">B</button>
+						<button class="button enable">&#x2190;</button>
+						<button class="button enable">CE</button>
+						<button class="button enable">C</button>
+						<button class="button enable">±</button>
+						<button class="button disabled">√</button>
+					</div>
+					<div class="row">
+						<button class="button enable smallerFont">RoL</button>
+						<button class="button enable smallerFont">RoR</button>
+						<button class="button disabled largerFont">C</button>
+						<button class="button enable largerFont">7</button>
+						<button class="button enable largerFont">8</button>
+						<button class="button enable largerFont">9</button>
+						<button class="button enable">/</button>
+						<button class="button disabled">%</button>
+					</div>
+					<div class="row">
+						<button class="button enable smallerFont">Or</button>
+						<button class="button enable smallerFont">Xor</button>
+						<button class="button disabled largerFont">D</button>
+						<button class="button enable largerFont">4</button>
+						<button class="button enable largerFont">5</button>
+						<button class="button enable largerFont">6</button>
+						<button class="button enable">*</button>
+						<button class="button disabled">1/x</button>
+					</div>
+					<div class="row">
+						<button class="button enable smallerFont">Lsh</button>
+						<button class="button enable smallerFont">Rsh</button>
+						<button class="button disabled largerFont">E</button>
+						<button class="button enable largerFont">1</button>
+						<button class="button enable largerFont">2</button>
+						<button class="button enable largerFont">3</button>
+						<button class="button enable">-</button>
+						<button class="button bold enable" id="equal">=</button>
+					</div>
+					<div class="row">
+						<button class="button enable smallerFont">Not</button>
+						<button class="button enable smallerFont">And</button>
+						<button class="button disabled">F</button>
+						<button class="button enable largerFont" id="zero">0</button>
+						<button class="button enable">,</button>
+						<button class="button enable">+</button>
+					</div>
+				</div>
+				<div id="numeralSystem">
+					<form>
+						<input type="radio" name="numeral" value="hex">Hex<br>
+						<input type="radio" name="numeral" value="dec">Dec<br>
+						<input type="radio" name="numeral" value="oct">Oct<br>
+						<input type="radio" name="numeral" value="bin">Bin
+					</form>
+				</div>
+				<div id="formattingButtons">
+					<form>
+						<input type="radio" name="format" value="qword">Qword<br>
+						<input type="radio" name="format" value="dword">Dword<br>
+						<input type="radio" name="format" value="word">Word<br>
+						<input type="radio" name="format" value="byte">Byte
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

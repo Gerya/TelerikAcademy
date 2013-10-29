@@ -1,0 +1,13 @@
+﻿/*@import url(http://fonts.googleapis.com/css?family=Risque);*/
+body {background-color:#a9a9a9; font-family: Risque,"Times New Roman",Georgia,Serif,Verdana,Sans-Serif; font-size:100%;}
+a:link, a:visited {text-decoration:none;color:Black;}
+header {color:White;}
+body > header {width: 200px; margin-left: auto; margin-right: auto;}
+nav ul a:link, nav ul a:visited {color:White;}
+nav ul {list-style-type: none;}
+body > footer {width: 300px; margin-left: auto; margin-right: auto;}
+ul > li:last-child {text-decoration:underline;}
+section > article:first-child + article {display:none;}
+section > article > p {white-space:nowrap; overflow:hidden; text-overflow: ellipsis;}
+section > article > p:hover {white-space:normal; overflow:visible;}
+ul > li:first-child + li a:link {background-color: #d3d3d3;}

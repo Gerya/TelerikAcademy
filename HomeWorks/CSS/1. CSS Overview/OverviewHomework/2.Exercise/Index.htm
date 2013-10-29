@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Table</title>
+	<link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+	<table>
+	<colgroup>
+	<col id="col1"/>
+	<col span="2" id="cols"/>
+	<col id="col4"/>
+	</colgroup>
+	<thead>
+			<tr>
+				<th>
+				Contact name
+				</th>
+				<th>
+				City
+				</th>
+				<th>
+				Country
+				</th>
+				<th>
+				Is Promoted
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr >
+				<td>
+					Maria Anderes
+				</td>
+				<td>
+					Berlin
+				</td>
+				<td>
+					<img alt = "germany" src="Imiges/germany.jpg" class= "flag"/>Germany
+				</td>
+				<td>
+					<input type="checkbox" name="country" disabled>
+				</td>
+			</tr>
+			<tr class="highlighted">
+				<td>
+					Ana Trujilo
+				</td>
+				<td>
+					M&#233;xico D.F.
+				</td>
+				<td>
+					<img alt="mexico" src="Imiges/mexico.jpg" class= "flag"/>Mexico
+				</td>
+				<td>
+					<input type="checkbox" name="country" disabled>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Antonio Moreno
+				</td>
+				<td>
+					M&#233;xico D.F.
+				</td>
+				<td>
+					<img alt="mexico" src="Imiges/mexico.jpg" class= "flag"/>Mexico
+				</td>
+				<td>
+					<input type="checkbox" name="country" checked disabled>
+				</td>
+			</tr>
+			<tr class="highlighted">
+				<td>
+					Thomas Hardy
+				</td>
+				<td>
+					London
+				</td>
+				<td>
+					<img alt="uk" src="Imiges/uk.jpg" class= "flag"/>UK
+				</td>
+				<td>
+					<input type="checkbox" name="country" disabled>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

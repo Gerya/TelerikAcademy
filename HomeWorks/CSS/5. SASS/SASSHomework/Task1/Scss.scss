@@ -1,0 +1,213 @@
+﻿@mixin linear-gradient($start-color,$start-percent,$end-color,$end-percent,$repeat:repeat-x)
+{
+background: $start-color;
+background: -moz-linear-gradient(top, $start-color $start-percent, $end-color, $end-percent);
+background: -webkit-gradient(linear, left top, left bottom, color-stop($start-percent,$start-color), color-stop($end-percent,$end-color));
+background: -webkit-linear-gradient(top, $start-color $start-percent,$end-color $end-percent);
+background: -o-linear-gradient(top, $start-color $start-percent,$end-color $end-percent);
+background: -ms-linear-gradient(top, $start-color $start-percent,$end-color  $end-percent);
+background: linear-gradient(to bottom, $start-color $start-percent,$end-color  $end-percent);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}',GradientType=0 );
+background-repeat:$repeat;
+}
+@mixin three-colors($start-color,$start-percent,$middle-color, $middle-percent, $end-color,$end-percent,$repeat:repeat-x)
+{
+background: $end-color;
+background: -moz-linear-gradient(top, $start-color $start-percent, $middle-color $middle-percent, $end-color $end-percent);
+background: -webkit-gradient(linear, left top, left bottom, color-stop($start-percent,$start-color), color-stop($middle-percent,$middle-color), color-stop($end-percent,$end-color));
+background: -webkit-linear-gradient(top, $start-color $start-percent,$middle-color $middle-percent,$end-color $end-percent);
+background: -o-linear-gradient(top, $start-color $start-percent,$middle-color $middle-percent,$end-color $end-percent);
+background: -ms-linear-gradient(top, $start-color $start-percent,$middle-color $middle-percent,$end-color $end-percent);
+background: linear-gradient(to bottom, $start-color $start-percent,$middle-color $middle-percent,$end-color $end-percent);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}',GradientType=0 );
+background-repeat:$repeat;
+}
+@mixin clearfix{
+  zoom:1;
+  &:after{
+    display:block; content:"";
+    height:0; clear:both; } }
+body,header,div,section,article,header,footer,p,aside,ul,li,h1,footer,h2,ul,li{
+margin:0px;
+padding:0px;
+}
+$text-color:white;
+body {
+	width:1440px;
+	color: $text-color;
+	font-size :13px;
+	 @include
+	 three-colors(#D6A4F9,3%,#901BEF, 17%, #9C38ED,40%);
+	 background-color: #9c38ed;
+
+	header{
+	width:1350px;
+
+		#header-container{
+		height:120px;
+		@include
+		clearfix;
+		}
+			#logo-container{
+			padding-left:10px;
+			display: inline-block;
+			}
+			#reg-form-container{
+			
+			float: right;
+			margin:0px;
+			padding:0px;
+			}
+				form{
+				margin-top: 15px;
+				}
+				form>div{
+				padding-left:5px;
+				line-height:30px;
+				}
+					label{
+					font-size:12px;
+					padding-right:10px;
+			
+				}
+					input{
+					border:1px solid #613484;
+					border-radius:10px;
+					background:rgba(179,94,243,0.5);
+					width:125px;
+					}
+					button{
+					padding-bottom:5px;
+					color: $text-color;
+					height:28px;
+					font-weight: bold;
+					font-size:12px;
+					border:1px solid;
+					border-radius:10px;
+					background:#b35ef3;
+					border-color:#bb91dc #4a2268 #4a2268 #bb91dc;
+					}
+		nav{
+		border:1px solid black;
+		border-radius:15px;
+		width:1080px;
+		height:45px;
+		margin-left:30px;
+		padding-left:15px;
+		
+			#main-nav-list >li{
+			display: inline-block;
+			line-height:40px;
+			padding-left:10px;
+			&:hover >a + ul{
+			display: block;
+			}
+
+					a{
+					text-decoration:none;
+					color:$text-color;
+					font-size:1.4em;
+					vertical-align: middle;
+					&:hover{
+					text-decoration:underline;
+					color: #a8a8a8;
+						}
+					}
+			
+						.sub-nav-list{
+						 position: absolute;
+						display: none;
+						background-color: rgba(179, 94, 243, 0.9);
+						border-radius: 5px;
+						list-style-type:none;
+						font-size:12px;
+						width:190px;
+						padding-left:15px;
+						padding-right:15px;
+						li{
+						border-bottom:1px solid black;
+						}
+						li:last-of-type{
+						border:none;
+						}
+						}
+			}
+		}
+	}
+	section{
+		@include clearfix;
+		float:left;
+		font-size:13px;
+		padding-top:20px;
+		padding-left:20px;
+		article{
+		width:1045px;
+		border:1px solid black;
+		border-radius:15px;
+		margin:20px;
+		padding:20px;
+		header{
+		font-weight: bold;
+		font-size:1.2em;
+		padding:5px;
+		}
+		footer{
+		padding:5px;
+		font-size:14px;
+		text-align: right;
+		a{
+		text-decoration:none;
+		color:#a8a8a8;
+		}
+		}
+		}
+	}
+	aside{
+	margin-top:40px;
+	float: right;
+	@include clearfix;
+		ul{
+
+		width:290px;
+			li{
+			margin-top:15px;
+			padding:10px;
+			list-style-type:none;
+			border:1px solid black;
+			border-radius:5px;
+				h2{
+				font-size:1.2em;
+				padding-bottom:5px;
+				}
+				p{
+				padding-bottom:10px;
+				a{
+				text-decoration:none;
+				color:#a8a8a8;
+				}
+				}
+				ul{
+					li{
+					border:none;
+					background:url("images/li-dot.png") no-repeat scroll 0px;
+					padding:0px;
+					padding-left:25px;
+					margin-top:5px;
+					}
+				}
+			}
+		}
+	}
+	>footer{
+	clear: both;
+	padding-bottom:25px;
+	padding-top:25px;
+	& p{
+	width:200px;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight:bold;
+	font-size:1.2em;
+	}
+	}
+}

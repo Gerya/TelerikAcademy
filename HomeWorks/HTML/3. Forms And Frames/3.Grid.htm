@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid</title>
+</head>
+<body>
+	<form action=" " method=get>
+		<table border="1" cellpadding="2">
+			<thead>
+				<tr>
+					<th colspan="6">
+					Drag a column header and drop it here to group by that column
+					</th>
+				</tr>
+				<tr>
+					<th>
+					ProductID
+					</th>
+					<th>
+					Product name
+					</th>
+					<th>
+					Unit price
+					</th>
+					<th>
+					Quantity per unit
+					</th>
+					<th>
+					Units in stock
+					</th>
+					<th>
+					Discontinued
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" name="nomeration" size="3" />
+					</td>
+					<td>
+						<input type="text" name="prname" size="30" />
+					</td>
+					<td>
+						<input type="text" name="uprice" size="10" />&nbsp;
+						<input type="image" src="images/speaker.png" alt="price" align="right"/>
+					</td>
+					<td>
+						<input type="text" name="prname" size="15" />
+					</td>
+					<td>
+						<input type="text" name="uprice" size="10" />&nbsp;
+						<input type="image" src="images/speaker.png" alt ="price" align="right"/>
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+						<input type="image" src="images/speaker.png" alt ="disscount" align="justify"/>
+					</td>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan = "6">
+						<button type=submit>
+						<img src="images/left.png" alt="left arrow"/></button>
+						<button type=submit>
+						<img src="images/left_.png" alt="left"/></button>
+						<input type=button value= 1 />
+						<input type=button value= 2 />
+						<input type=button value= 3 />
+						<input type=button value= 4 />
+						<input type=button value= 5 />
+						<input type=button value= 6 />
+						<input type=button value= 7 />
+						<input type=button value= 8 />
+						<input type=button value= 9 />
+						<input type=button value= 10 /> ....
+						<button type=submit>
+						<img src="images/right.png" alt="right arrow"/></button>
+						<button type=submit>
+						<img src="images/right_.png" alt="right arrow"/></button>
+						<label for="psize">Page Size</label>
+							<select id="psize" name="psize">
+							<option value="1">1</option> 
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">5</option>
+							<option value="19" selected="selected">10</option>
+							</select>
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>
+						1
+					</td>
+					<td>
+						Chai
+					</td>
+					<td>
+						$18,00
+					</td>
+					<td>
+						10 boxes x 20 bags    
+					</td>
+					<td>
+						39
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						2
+					</td>
+					<td>
+						Chang
+					</td>
+					<td>
+						$19,00
+					</td>
+					<td>
+						12 - 24 oz bottles    
+					</td>
+					<td>
+						17
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						3
+					</td>
+					<td>
+						Aniseed Syrup
+					</td>
+					<td>
+						$10,00
+					</td>
+					<td>
+						12 - 550 ml bottles    
+					</td>
+					<td>
+						13
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						4
+					</td>
+					<td>
+						Chef Anton's Cajun Seasoning
+					</td>
+					<td>
+						$22,00
+					</td>
+					<td>
+						48 - 6 oz jars    
+					</td>
+					<td>
+						53
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						5
+					</td>
+					<td>
+						Chef Anton's Gumbo Mix
+					</td>
+					<td>
+						$21,35
+					</td>
+					<td>
+						36 boxes    
+					</td>
+					<td>
+						0
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						6
+					</td>
+					<td>
+						Grandma's Boysenberry Spread
+					</td>
+					<td>
+						$25,00
+					</td>
+					<td>
+						12 - 8 oz jars    
+					</td>
+					<td>
+						120
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						7
+					</td>
+					<td>
+						Uncle Bob's Organic Dried pears
+					</td>
+					<td>
+						$30,00
+					</td>
+					<td>
+						12 - 1 lb pkgs.   
+					</td>
+					<td>
+						15
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						8
+					</td>
+					<td>
+						Northwoods Cranberry Sauce
+					</td>
+					<td>
+						$40,00
+					</td>
+					<td>
+						12 - 12 oz jars    
+					</td>
+					<td>
+						6
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						9
+					</td>
+					<td>
+						Mishi Kobe Niku
+					</td>
+					<td>
+						$97,00
+					</td>
+					<td>
+						18 - 500 g pkgs.    
+					</td>
+					<td>
+						29
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						10
+					</td>
+					<td>
+						Ikura
+					</td>
+					<td>
+						$31,00
+					</td>
+					<td>
+						12 - 200 ml jars    
+					</td>
+					<td>
+						31
+					</td>
+					<td>
+						<input type="checkbox" name="discont">
+					</td>
+				</tr>
+			</tbody>
+	</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿table {background-color: rgb(89,89,89);color: White;}
+td { /*border: 1px solid black; */padding-bottom: 10px;}
+tr {vertical-align:text-top;}
+th {color: rgb(172,182,178);font-size:20px;font-weight:normal;}
+.fRow{color: White;font-style:italic;font-size:15px;}
+#redRow{color:Red;}
+.greyRow{color:Gray}
+#orangeRow{color:Orange}
+#dot {height:12px;width:12px;margin-right:4px;}
+

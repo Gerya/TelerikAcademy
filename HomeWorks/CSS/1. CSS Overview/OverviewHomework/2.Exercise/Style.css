@@ -1,0 +1,8 @@
+﻿table {text-indent:5px;font-size:17px;text-align:left; border-collapse: collapse;}
+.flag{vertical-align:middle;margin-right:5px; width:40px; height:30px;}
+table > thead > tr {font-weight:normal; background-color:rgb(88,187,6);color:White; height:30px; border-bottom: 1px solid gray;}
+table > tbody > tr.highlighted {background-color:#eee;height:40px;}
+table > tbody > tr{background-color:#fff;height:40px;}
+#col1 {width: 200px;}
+#cols {width: 200px;border-left: 1px solid lightgray;}
+#col4 {width: 130px; border-left: 1px solid lightgray;}

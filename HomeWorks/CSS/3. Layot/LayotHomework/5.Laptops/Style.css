@@ -1,0 +1,82 @@
+﻿.clearfix {
+   zoom:1;}
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+#base
+{
+    width:715px;
+    height:580px;
+    margin:0px;
+    padding:0px;
+    font-size:16px;
+    font-family:Lucida Bright;
+    border:1px solid black;
+    border-radius:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+hr
+{
+    width:635px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:15px;
+    border:1px solid black;
+ }
+h2
+{
+    width:460px;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:1.3em;
+}
+a 
+{
+    color:#00a8ee;
+    
+}
+#price
+{
+    width:210px;
+    height:270px;
+    font-size:20px;
+    margin-right:5px;
+    margin-top:110px;
+}
+#laptops
+{
+    border:1px solid black;
+    margin-left:5px;
+    width:485px;
+    height:490px;
+}
+fieldset
+{
+    width:210px;
+    height:135px;
+    border:1px solid black;
+    margin-top:5px;
+    margin-left:5px;
+    margin-right:5px;
+}
+legend
+{
+    width:205px;
+    text-align:center;
+}
+fieldset>p {
+    line-height:34px;
+}
+fieldset>p+p
+{
+    padding-left:15px;
+}
+.float
+{
+    float:right;
+}

@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+	<style type="text/css">
+		ul{
+		list-style-type: none;
+		}
+		a{
+		    text-decoration:none;
+			color:black;
+		   }
+		.main>li>a:hover
+		{
+		    text-decoration:underline;
+		}
+		.main li:hover .submenu
+		{
+		    display:block;
+		}
+		.submenu 
+		{
+		    display:none;
+		    margin:0px;
+		    margin-left:10px;
+		    padding:0px;
+		}
+		.submenu a
+		{
+		    color:Gray;
+		}
+	</style>
+</head>
+<body>
+	<ul class="main">
+		<li>
+		<a href="#">List Item</a>
+				<ul class="submenu">
+				<li>
+				<a href="#">Sublist Item</a>
+				</li>
+				<li>
+				<a href="#">Sublist Item</a>
+				</li>
+				<li>
+				<a href="#">Sublist Item</a>
+				</li>
+				<li>
+				<a href="#">Sublist Item</a>
+				</li>
+			</ul>
+		</li>
+		<li class="selected">
+			<a href="#">List Item</a>
+		</li>
+		<li class="selected">
+			<a href="#">List Item</a>
+		</li>
+		<li class="selected">
+			<a href="#">List Item</a>
+			<ul class="submenu">
+				<li>
+				<a href="#">Sublist Item</a>
+				</li>
+				<li>
+				<a href="#">Sublist Item</a>
+				</li>
+				<li>
+				<a href="#">Sublist Item</a>
+				</li>
+				<li>
+				<a href="#">Sublist Item</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</body>
+</html>

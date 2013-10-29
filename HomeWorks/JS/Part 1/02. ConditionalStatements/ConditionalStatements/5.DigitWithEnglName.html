@@ -1,0 +1,61 @@
+﻿<html>
+<head>
+	<title>Digit with English name</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>	<br />
+    <form action="#" name="myform" onsubmit="getNumber()">
+        <input type="number" min =" 1" max="11" size="3" id ="userInput"/>
+    </form>	
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var number;
+	    function getNumber() {
+	        number = parseInt(document.getElementById("userInput").value, 10);
+	        switch (number) {
+	            case 0:
+	                jsConsole.writeLine("Zero");
+	                break;
+	            case 1:
+	                jsConsole.writeLine("One");
+	                break;
+	            case 2:
+	                jsConsole.writeLine("Two");
+	                break;
+	            case 3:
+	                jsConsole.writeLine("Three");
+	                break;
+	            case 4:
+	                jsConsole.writeLine("Four");
+	                break;
+	            case 5:
+	                jsConsole.writeLine("Five");
+	                break;
+	            case 6:
+	                jsConsole.writeLine("Six");
+	                break;
+	            case 7:
+	                jsConsole.writeLine("Seven");
+	                break;
+	            case 8:
+	                jsConsole.writeLine("Eight");
+	                break;
+	            case 9:
+	                jsConsole.writeLine("Nine");
+	                break;
+	            case 10:
+	                jsConsole.writeLine("Ten");
+	                break;
+	            default:
+	                jsConsole.writeLine("Please enter valid number");
+	                break;
+	        }
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

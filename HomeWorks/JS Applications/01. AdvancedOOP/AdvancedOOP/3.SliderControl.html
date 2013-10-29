@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="Scripts/slider-control.js"></script>
+    <style>
+        #imageSlider{
+            width:650px;
+            margin:auto;
+        }
+        #priview{
+            margin:auto;
+            height:320px;
+            width:600px;
+            margin-bottom:10px;
+        }
+        #thumbnail{
+            width:650px;
+            height:110px;
+            
+        }
+        #imagesDiv{
+            width:600px;
+            overflow:hidden;
+            margin:auto;
+        }
+        #leftButton{
+            height:50px;
+            width:20px;
+            background:url("Images/arrows.png") no-repeat -10px -15px;
+            float:left;
+            margin-top:25px;
+            padding:0;
+        }
+        #rightButton{
+            margin-top:25px;
+            height:50px;
+            width:20px;
+            background:url("Images/arrows.png") no-repeat -90px -15px;
+            float:right;
+            padding:0;
+        }
+        a{
+            margin:0;
+            padding:0px 10px;
+            height:50px;
+            display:block;
+        }
+        ul{
+            width: 1100px;
+            margin:0;
+            padding:0;
+            list-style:none;
+            position:relative;
+        }
+        li{
+            float:left;
+            width:200px;
+            height:103px;
+        }
+    </style>
+</head>
+<body>
+    <div id="imageSlider">
+    </div>
+    <script>
+        var imageOne = Object.create(Image);
+        imageOne.init("First", "Images/1small.jpg", "Images/1.jpg");
+        var imageTwo = Object.create(Image);
+        imageTwo.init("Second", "Images/2small.jpg", "Images/2.jpg")
+        var imageThree = Object.create(Image);
+        imageThree.init("Third", "Images/3small.jpg", "Images/3.jpg")
+        var imageFour = Object.create(Image);
+        imageFour.init("Fourth", "Images/4small.jpg", "Images/4.jpg")
+        var imageFive = Object.create(Image);
+        imageFive.init("Fifth", "Images/5small.jpg", "Images/5.jpg")
+
+        var thumbnail = Object.create(Thumbnail);
+        thumbnail.init();
+        thumbnail.addImage(imageOne);
+        thumbnail.addImage(imageTwo);
+        thumbnail.addImage(imageThree);
+        thumbnail.addImage(imageFour);
+        thumbnail.addImage(imageFive);
+        var slider = Object.create(ImageSlider);
+        slider.init("#imageSlider", thumbnail);
+        slider.create();
+    </script>
+</body>
+</html>

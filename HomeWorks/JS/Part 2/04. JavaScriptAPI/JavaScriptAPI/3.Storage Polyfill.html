@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Script/JSON.js"></script>
+    <script src="Script/localStorage.js"></script>
+</head>
+<body>
+    <script>
+        function testLocalStore() {
+            console.log("This is test for localStorage");
+            console.log("Number of stored item in start: "+localStorage.length);
+            localStorage.setItem("first", "This is the first test");
+            var firstStored = localStorage.getItem("first");
+            console.log("Add to local storage item with key first and content: "+firstStored);
+            localStorage.setItem("second", "This is the second test");
+            var secondStored = localStorage.getItem("second");
+            console.log("Add to local storage item with key second and content: " + secondStored);
+            console.log("Stored item now are: "+localStorage.length);
+            localStorage.removeItem("first");
+            console.log("Delete item with key:first, number of stored item now: " + localStorage.length);
+            localStorage.removeItem("second");
+            console.log("Delete item with key:second, number of stored item now: " + localStorage.length);
+            console.log("----------------------------------------------------");
+        }
+        function testLocalSession() {
+            console.log("This is test for sessionStorage");
+            console.log("Number of stored item in start: " + sessionStorage.length);
+            sessionStorage.setItem("first", "This is the first test");
+            var firstStored = sessionStorage.getItem("first");
+            console.log("Add to local storage item with key first and content: " + firstStored);
+            sessionStorage.setItem("second", "This is the second test");
+            var secondStored = sessionStorage.getItem("second");
+            console.log("Add to local storage item with key second and content: " + secondStored);
+            console.log("Stored item now are: " + sessionStorage.length);
+            sessionStorage.removeItem("first");
+            console.log("Delete item with key:first, number of stored item now: " + sessionStorage.length);
+            sessionStorage.removeItem("second");
+            console.log("Delete item with key:second, number of stored item now: " + sessionStorage.length);
+        }
+        testLocalStore();
+        testLocalSession();
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Function counts number in array</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        testFunction();
+        function testFunction() {
+            var arr = [1, 2, 3, 4, 2, 3, 4, 21, 2];
+            var number = 2;
+            var result = CountNumbers(arr, number);
+            if (result == 3) {
+                jsConsole.writeLine("Function is working");
+            }
+            var arr = [1, 2,3,3, 3, 4, 2, 3, 4, 21, 2];
+            var number = 3;
+            var result = CountNumbers(arr, number);
+            if (result == 4) {
+                jsConsole.writeLine("Function is working");
+            }
+        }
+        function CountNumbers(array, number) {
+            var counter = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == number)
+                    counter++;
+            }
+            return counter;
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html> 

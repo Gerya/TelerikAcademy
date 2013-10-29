@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Buttons</title>
+    <style>
+        a
+        {
+            display:inline-block;
+
+            color:black;
+        }
+        button{
+            /*display:inline-block;*/
+            /*text-decoration:none;*/
+            color:black;
+            background:none;
+            border:none;
+            cursor:pointer;
+            margin:0;
+            padding:0;
+        }
+
+        .left, .middle, .right{
+            float:left;
+            height:53px;
+        }
+
+        .left, .right
+        {
+            width:26px;
+        }
+
+        .left{
+            background:transparent url(images/leftButton.png) no-repeat ;
+        }
+
+        .middle{
+            background:transparent url(images/buttoncenter.png) repeat-x;
+            width:auto;
+            line-height:53px;
+        }
+
+        .right{
+            background:transparent url(images/rightButton.png) no-repeat;
+        }
+        #textUnderline
+        {
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <button>
+        <span class="left"></span>
+        <span class="middle">Ok</span>
+        <span class="right"></span>
+    </button>
+
+     <button>
+        <span class="left"></span>
+        <span class="middle">Cancel</span>
+        <span class="right"></span>
+    </button>
+
+    <a href="#">
+        <span class="left"></span>
+        <span class="middle" id="textUnderline">View More Information</span>
+        <span class="right"></span>
+    </a>
+</body>
+</html>

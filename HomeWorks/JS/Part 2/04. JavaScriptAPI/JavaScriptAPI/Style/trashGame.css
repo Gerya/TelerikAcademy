@@ -1,0 +1,90 @@
+﻿#bucket{
+            width:116px;
+            height:170px;
+            background:url("../Images/bucket.jpg") no-repeat;
+            
+}
+.trash{
+            width:58px;
+            height:59px;
+            background:url("../Images/trash.png") no-repeat;
+            text-align:center;
+            padding-top:20px;
+            position: absolute;
+}
+#gameField
+{
+    padding-top:20px;
+}
+#scoretable{
+	display: none;
+	position: absolute;
+	top:40px;
+	left:580px;
+	width: 300px;
+	height: 150px;
+}
+	#scoretable table{
+		border-collapse: collapse;
+		width: 250px;
+	}
+
+	#scoretable table td{
+		border: 1px solid black;
+		padding: 5px;
+	}
+
+	#topPlayers{
+		margin-top: 10px;
+	}
+    
+#newScore{
+	display: none;
+	position: absolute;
+	top:40px;
+	left:260px;
+	width: 300px;
+	height: 150px;
+}
+	#newScore #time{
+		
+	}
+
+	#newScore fieldset{
+		padding: 15px 10px 10px 10px;
+	}
+	
+	#newScore label, #newScore input{
+		margin-top: 10px;
+	}
+
+	#newScore fieldset input[type="text"]{
+		width: 100px;
+	}
+
+.close{
+	display: inline-block;
+	position: relative;
+	top: 30px;
+	left: 275px;
+    font-weight:bold;
+}
+
+.close:hover{
+	cursor: pointer;
+}
+#timetextarea{
+	font-size: 20px;
+	font-style: italic;
+	border:none;
+	margin-left:60px;
+}
+
+	#collected{
+		font-style: italic;
+		font-size: 16px;	
+		display: block;
+		margin-top: 30px;
+		margin-left:30px;
+        font-weight:bold;
+	}

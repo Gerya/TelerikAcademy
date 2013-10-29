@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+<style>
+    div
+    {
+        padding:30px;
+    }
+    form
+    {
+        font-size:15px;
+        margin-bottom:10px;
+    }
+    #colorFont
+    {
+        margin-bottom:10px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <form>
+            <label for="colorFont">Text Color</label><br />
+            <input type="color" id="colorFont"/><br />
+            <label for="colorTextArea">Background Color</label><br />
+            <input type="color" id="colorTextArea"/>
+        </form>
+        <textarea>Some text</textarea>
+    </div>
+    <script>
+        (function () {
+            //Chrome, Opera supports color input
+            'use strict';
+
+            var textArea = document.getElementsByTagName('textarea')[0];
+
+            document.getElementById('colorFont').addEventListener('change', function () { textArea.style.color = this.value });
+            document.getElementById('colorTextArea').addEventListener('change', function () { textArea.style.backgroundColor = this.value });
+        })();
+    </script>
+</body>
+</html>

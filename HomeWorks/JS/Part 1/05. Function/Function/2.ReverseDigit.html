@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse Digit</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <form action="#" name="myform" >
+        Input value for number : <input type="number" size="3" id ="Number1"/>
+        <input type="button" onclick="getNumber()" value="Reverse" />
+    </form>	
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var i;
+        function getNumber() {
+            i = document.getElementById("Number1").value;
+            reverseDigit(i);
+        }
+        function reverseDigit(number) {
+            var item = number.toString();
+            var result = [];
+            for (var j = item.length-1; j >=0; j--) {
+                result.push(item[j]);
+            }
+            jsConsole.writeLine("Your number was "+ number + " reversed is " + result.join(""));
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html> 

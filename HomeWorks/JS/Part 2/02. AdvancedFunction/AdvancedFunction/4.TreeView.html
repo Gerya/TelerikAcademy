@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>TreeView</title>
+    <script src="JavaScript.js"></script>
+    <style>
+        ul
+        {
+            margin:0;
+            padding-left:20px;
+        }
+        li ul
+        {
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tree-view"></div>
+    <script>
+        var treeView = new controls.TreeView("div.tree-view");
+        var jsnode = treeView.addNode();
+        jsnode.content("JavaScript");
+        var js1subnode = jsnode.addNode();
+        js1subnode.content("JavaScript - part 1");
+        var js2subnode = jsnode.addNode();
+        js2subnode.content("JavaScript - part 2");
+        var jslibssubnode = jsnode.addNode();
+        jslibssubnode.content("JS Libraries");
+        var jsframeworksnode = jsnode.addNode();
+        jsframeworksnode.content("JS Frameworks and UI");
+
+        var webnode = treeView.addNode();
+        webnode.content("Web");
+        var webnode1 = webnode.addNode();
+        webnode1.content("Web 1.0 - The static web");
+        var webnode2 = webnode.addNode();
+        webnode2.content("Web 2.0 - The social web");
+        var webnode3 = webnode.addNode();
+        webnode3.content("Web 3.0 - The semantic web");
+
+        var universe = treeView.addNode();
+        universe.content("Universe");
+        var particles = universe.addNode();
+        particles.content("Particles");
+        var subatoms = particles.addNode();
+        subatoms.content("Subatoms");
+        var elementary = subatoms.addNode();
+        elementary.content("Elementary");
+        var quarks = elementary.addNode();
+        quarks.content("Quarks");
+        var leptons = elementary.addNode();
+        leptons.content("Leptons");
+        var gbosson = elementary.addNode();
+        gbosson.content("Gauge bossons");
+        var hbosson = elementary.addNode();
+        hbosson.content("Higgs bosson");
+        var composite = subatoms.addNode();
+        composite.content("Composite");
+        var hadrons = composite.addNode();
+        hadrons.content("Hadrons");
+        var baryons = composite.addNode();
+        baryons.content("Baryons");
+        var mesons = composite.addNode();
+        mesons.content("Mesons");
+
+        treeView.addEventHandler("click", function (evt) {
+            evt.target = evt.target || evt.srcElement;
+
+            if (evt.target instanceof HTMLAnchorElement) {
+                if (!evt.target.parentNode.id) {
+                    var randomId = 'a' + Date.now();
+                    evt.target.parentNode.id = randomId;
+                }
+
+                var ulSiblings = document.querySelectorAll("#" + evt.target.parentNode.id + " > ul");
+
+                evt.preventDefault ? evt.preventDefault() : evt.returnValue = false;
+            }
+
+            if (typeof ulSiblings !== "undefined"
+                    && ulSiblings.length > 0) {
+                var display = "";
+
+                if (ulSiblings[0].style.display == "block") {
+                    display = "none";
+                } else {
+                    display = "block";
+                }
+
+                for (var i = 0; i < ulSiblings.length; i++) {
+                    ulSiblings[i].style.display = display;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

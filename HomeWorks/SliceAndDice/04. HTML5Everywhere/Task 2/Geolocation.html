@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Get Current Position</title>
+</head>
+<body>
+    <div id="mapholder"></div>
+      <script src="geoPosition.js"></script>
+    <script>
+        if (geoPosition.init()) {
+            geoPosition.getCurrentPosition(geoSuccess, geoError);
+        }
+        function geoSuccess(p) {
+            alert("Found you at latitude " + p.coords.latitude +
+                  ", longitude " + p.coords.longitude);
+            showPosition(p.coords.latitude,p.coords.longitude)
+        }
+        function geoError() {
+            alert("Could not find you!");
+        }
+        function showPosition(latitude, longitude) {
+            var latlon = latitude + "," + longitude;
+            var img_url = "http://maps.googleapis.com/maps/api/staticmap?center="
+            + latlon + "&zoom=14&size=400x300&sensor=false";
+            document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+        }
+    </script>
+</body>
+</html>

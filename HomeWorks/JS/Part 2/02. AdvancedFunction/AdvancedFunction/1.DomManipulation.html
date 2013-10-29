@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <div id="wrapper">
+        <ul>
+            <li>Text
+            </li>
+            <li>someText
+            </li>
+            <li>
+                otherText
+            </li>
+        </ul>
+        <button type="submit" class="button">Try me!</button>
+    </div>
+    <script>
+        var domModule = (function () {
+            function appendChild(element, parent) {
+                document.querySelector(parent).appendChild(element);
+            }
+            function removeChild(parent, element) {
+                var parent = document.querySelector(parent);
+                var element = parent.querySelector(element);
+                parent.removeChild(element);
+            }
+            function addHandler(selector, eventType, handler) {
+                var element = document.querySelector(selector);
+                if (element.addEventListener) {
+                    element.addEventListener(eventType, handler, false);
+                } else if (elem.attachEvent) {
+                    element.attachEvent('on' + eventType, handler);
+                }
+            }
+            function appendToBuffer(selector, element) {
+                var MAX_BUFFER_ELEMENTS = 100;
+                var elementsBuffer = {};
+
+                if (!elementsBuffer[selector]) {
+                    elementsBuffer[selector] = document.createDocumentFragment();
+                }
+
+                elementsBuffer[selector].appendChild(element);
+                if (elementsBuffer[selector].childNodes.length === MAX_BUFFER_ELEMENTS) {
+                    var parent = document.querySelector(selector);
+                    parent.appendChild(elementsBuffer[selector]);
+                    elementsBuffer[selector] = null;
+                }
+            }
+            function getSelector(selector) {
+                return document.querySelector(selector);
+            }
+
+            function getSelectorAll(selector) {
+                return document.querySelectorAll(selector);
+            }
+
+            return {
+                appendChild: appendChild,
+                removeChild: removeChild,
+                addHandler: addHandler,
+                appendToBuffer: appendToBuffer,
+                getSelector: getSelector,
+                getSelectorAll: getSelectorAll,
+            };
+        })();
+        var div = document.createElement("div");
+        domModule.appendChild(div, "#wrapper");
+        domModule.removeChild("ul", "li");
+        domModule.addHandler(".button", 'click', function () { alert("Clicked") });
+        domModule.appendToBuffer("container", div.cloneNode(true));
+        domModule.appendToBuffer("#main-nav ul", navItem);
+        domModule.appendToBuffer("container", div);
+    </script>
+</body>
+</html>

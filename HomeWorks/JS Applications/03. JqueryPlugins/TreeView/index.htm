@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.0.2.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+    <script src="treeview-plugin.js" type="text/javascript"></script>
+</head>
+<body>
+        <div class="tree-view">
+            <ul><li><a href="#">JavaScript</a><ul><li><a href="#">JavaScript - part 1</a></li></ul><ul><li><a href="#">JavaScript - part 2</a></li></ul><ul><li><a href="#">JS Libraries</a></li></ul><ul><li><a href="#">JS Frameworks and UI</a></li></ul></li><li><a href="#">Web</a><ul><li><a href="#">Web 1.0 - The static web</a></li></ul><ul><li><a href="#">Web 2.0 - The social web</a></li></ul><ul><li><a href="#">Web 3.0 - The semantic web</a></li></ul></li><li><a href="#">Universe</a><ul><li><a href="#">Particles</a><ul><li><a href="#">Subatoms</a><ul><li><a href="#">Elementary</a><ul><li><a href="#">Quarks</a></li></ul><ul><li><a href="#">Leptons</a></li></ul><ul><li><a href="#">Gauge bossons</a></li></ul><ul><li><a href="#">Higgs bosson</a></li></ul></li></ul><ul><li><a href="#">Composite</a><ul><li><a href="#">Hadrons</a></li></ul><ul><li><a href="#">Baryons</a></li></ul><ul><li><a href="#">Mesons</a></li></ul></li></ul></li></ul></li></ul></li></ul>
+        </div>
+    <script>
+        var treeView = $("div.tree-view").TreeView(
+            {
+                collapsed: true,
+                toggle: function (element) {
+                    console.log("%o was toggled", element);
+                }
+            });
+    </script>
+</body>
+</html>

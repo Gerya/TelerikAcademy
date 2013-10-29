@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Maximal sequence of equal elements in an array.</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        FindMaximalSequence();
+        function FindMaximalSequence(){
+            var start = 0;
+            var beststart = 0;
+            var count = 1;
+            var bestcount = 0;
+            var numbers = [2, 1, 1, 2, 3, 3, 2, 2, 2, 1];
+            for (var i = 0; i < numbers.length; i++) {
+                if (numbers[i] != numbers[i - 1]) {
+                    start = i;
+                    count = 1;
+                }
+                else {
+                    count++;
+                    if (count > bestcount) {
+                        beststart = start;
+                        bestcount = count;
+                    }
+                }
+            }
+            jsConsole.writeLine("The maximal sequence is:");
+            for (var i = beststart; i < beststart+bestcount; i++){
+                jsConsole.write(numbers[i]+" ");
+            }
+       }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

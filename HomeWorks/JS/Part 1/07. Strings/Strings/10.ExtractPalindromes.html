@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Extracting all palindromes</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+        <p>
+         Lorem Ipsum is simply alabala dummy, text of the bztzb printing and ABBA. 
+         Lorem Ipsum has lamal been! The industry's standard exe dummy text ever since the 1500s?
+        </p>
+	</div>
+    <button type="button" onclick="extractPalindromes()">Extract!</button> 
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text = "";
+	    var palindromArr = [];
+	    var result = "";
+	    var reverseStr="";
+	    function extractPalindromes() {
+	        text = document.getElementsByTagName("p")[0].innerHTML;
+	        //text = text.replace(/[,.!?\n]/g, " ");
+	        palindromArr = text.split(/[,.!?\n\s]+/g);
+	        if (palindromArr) {
+	            for (var i = 0; i < palindromArr.length; i++) {
+	                if (palindromArr[i].length > 1) {
+	                    if (palindrome(palindromArr[i])) {
+	                        result += palindromArr[i] + ", ";
+	                    }
+	                }
+	            }
+	        }
+	        jsConsole.writeLine(result.slice(0,-2));
+	    }
+	    function reverseString(str) {
+	        var stri = "";
+	        var alen = str.length;
+	        for (var i = alen ; i > 0 ; i--) {
+	            stri += str.charAt(i - 1)
+	        }
+	        return stri;
+	    }
+	    function palindrome(str) {
+	        return (str == reverseString(str));
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

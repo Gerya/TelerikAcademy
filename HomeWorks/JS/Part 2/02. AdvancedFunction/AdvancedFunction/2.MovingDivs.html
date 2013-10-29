@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Moving Divs</title>
+    <style>
+        .rotateDiv
+        {
+            height: 30px;
+            width: 20px;
+            border-radius:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <button type="submit" id="circle" onclick="ellipseleCreate()">Ellipse</button>
+        <button type="submit" id="rectangle" onclick="rectangleCreate()">Rectangle</button>
+        <button type="submit" id="clear" onclick="clearPage()">Clear page</button>
+        <div id="movingArea">
+        </div>
+    </div>
+    <script>
+            var pageVisibleSize = getPageSize();
+            var maxWidth = pageVisibleSize.width - 150;
+            var maxHeight = pageVisibleSize.height - 50;
+            var contentDiv = document.getElementById("movingArea");
+
+            function getPageSize() {
+                var size = { width: 0, height: 0 };
+
+                if (window.innerWidth && window.innerHeight) {
+                    size.width = window.innerWidth;
+                    size.height = window.innerHeight;
+                } else {
+                    size.width = document.documentElement.offsetWidth;
+                    size.height = document.documentElement.offsetHeight;
+                }
+
+                return size;
+            }
+            function clearPage() {
+                while (contentDiv.firstChild) {
+                    contentDiv.removeChild(contentDiv.firstChild);
+                }
+                var interval_id = window.setInterval("", 9999);
+                for (var i = 1; i < interval_id; i++) {
+                    window.clearInterval(i);
+                }
+            }
+            var movingShapes = (function () {
+
+                function add(rotation) {
+                    var div = document.createElement("div");
+                    div.className = 'rotateDiv';
+                    makeRandomDiv(div);
+                    if (rotation == "ellipse") {
+                        moveEllipse(div);
+                    }
+                    else {
+                        moveRectangle(div);
+                    }
+                    contentDiv.appendChild(div);
+                }
+
+                function moveEllipse(div) {
+                    var angleInDegrees = 0;
+                    var radius = generateRandomNumber(30, 100);
+                    var tick = generateRandomNumber(10, 50);
+                    var angleInRadians = angleInDegrees * Math.PI / 180.0;
+                    var centerLeft = parseInt(div.style.left) - (radius * Math.sin(angleInRadians));
+                    var centerTop = parseInt(div.style.top) - (radius * Math.cos(angleInRadians));
+
+                    window.setInterval(function () {
+                        angleInDegrees++;
+                        if (angleInDegrees === 360 || angleInDegrees > 360) {
+                            angleInDegrees = 0;
+                        }
+
+                        angleInRadians = angleInDegrees * Math.PI / 180.0;
+                        div.style.top = (radius * Math.cos(angleInRadians) + centerTop) + "px";
+                        div.style.left = (radius * Math.sin(angleInRadians) + centerLeft) + "px";
+
+                    }, tick, angleInDegrees);
+                }
+
+                function moveRectangle(div) {
+                    var direction = "left";
+                    var width = generateRandomNumber(50, 120);
+                    var height = generateRandomNumber(50, 120);
+                    var tick = generateRandomNumber(10, 50);
+                    var startLeft = parseInt(div.style.left);
+                    var startTop = parseInt(div.style.top);
+
+                    window.setInterval(function () {
+                        var left = parseInt(div.style.left);
+                        var top = parseInt(div.style.top);
+
+                        if (direction === "left") {
+                            left++;
+                            div.style.left = left + "px";
+                            if (left >= startLeft + width) {
+                                direction = "up";
+                            }
+                        }
+                        else if (direction === "up") {
+                            top--;
+                            div.style.top = top + "px";
+                            if (top <= startTop - height) {
+                                direction = "right";
+                            }
+
+                        }
+                        else if (direction === "right") {
+                            left--;
+                            div.style.left = left + "px";
+                            if (left <= startLeft) {
+                                direction = "down"
+                            }
+                        }
+                        else if (direction === "down") {
+                            top++;
+                            div.style.top = top + "px";
+                            if (top >= startTop) {
+                                direction = "left"
+                            }
+                        }
+                    }, tick, direction);
+                }
+
+                function makeRandomDiv(div) {
+                    div.style.backgroundColor = generateRandomColor();
+                    div.style.position = "absolute";
+                    div.style.top = generateRandomNumber(150, maxHeight) + "px";
+                    div.style.left = generateRandomNumber(120, maxWidth) + "px";
+                    div.style.border = generateRandomNumber(1, 15) + "px solid " + generateRandomColor();
+                }
+
+                function generateRandomColor() {
+                    var red = (Math.random() * 256) | 0;
+                    var green = (Math.random() * 256) | 0;
+                    var blue = (Math.random() * 256) | 0;
+
+                    return "rgb(" + red + "," + green + "," + blue + ")";
+                }
+
+                function generateRandomNumber(start, end) {
+                    var number = Math.floor(Math.random() * (end - start + 1)) + start;
+                    return number;
+                }
+                return {
+                    add: add
+                };
+            })();
+
+            function rectangleCreate() {
+                movingShapes.add("rect");
+            }
+
+            function ellipseleCreate() {
+                movingShapes.add("ellipse");
+            }
+    </script>
+</body>
+</html>

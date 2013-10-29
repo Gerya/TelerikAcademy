@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>How many times a substring is contained in a given text </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+        <p>
+        We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. 
+            We <mixcase>don't</mixcase> have <lowcase>anything</lowcase> else.
+        </p>
+	</div>
+    <button type="button" onclick="changeText()">Change!</button> 
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text;
+	    var result = "";
+	    function changeText() {
+	        text = document.getElementsByTagName("p")[0].innerHTML;
+            result = text.replace(/<upcase>(.*?)<\/upcase>/g, setUpper);
+            result = result.replace(/<lowcase>(.*?)<\/lowcase>/g, setLower);
+            result = result.replace(/<mixcase>(.*?)<\/mixcase>/g, setMixed);
+            jsConsole.writeLine(result);
+	    }
+	    function setUpper(group) { return group.toUpperCase(); }
+	    function setLower(group) { return group.toLowerCase(); }
+	    function setMixed(group){
+	        var randomNumber = Math.floor(Math.random() * 2);
+	            if (randomNumber == 1) {
+	                group = group.toUpperCase();
+	            }
+	            else {
+	                group = group.toLowerCase();
+	            }
+ 	        return group;
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

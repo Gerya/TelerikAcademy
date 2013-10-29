@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Last number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <form action="#" name="myform" >
+        Input value for number : <input type="number" size="3" id ="Number1"/>
+        <input type="button" onclick="getNumber()" value="Submit" />
+    </form>	
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var i;
+        function getNumber() {
+            i = parseInt(document.getElementById("Number1").value, 10);
+            FindLastDigit(i);
+        }
+        function FindLastDigit(number) {
+            var lastDigit = number % 10;
+            var string;
+            switch (lastDigit) {
+                case 0:
+                    string = "Zero"
+                    break;
+                case 1:
+                    string = "One"
+                    break;
+                case 2:
+                    string = "Two"
+                    break;
+                case 3:
+                    string = "Three"
+                    break;
+                case 4:
+                    string = "Four"
+                    break;
+                case 5:
+                    string = "Five"
+                    break;
+                case 6:
+                    string = "Six"
+                    break;
+                case 7:
+                    string = "Seven"
+                    break;
+                case 8:
+                    string = "Eight"
+                    break;
+                case 9:
+                    string = "Nine"
+                    break;
+            }
+            jsConsole.writeLine("Last number is: "+string);
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html> 

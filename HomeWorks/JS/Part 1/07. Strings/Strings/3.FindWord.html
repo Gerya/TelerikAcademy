@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>How many times a substring is contained in a given text </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+        <p>
+            We are living in an yellow submarine. We don't have anything else. 
+            Inside the submarine is very tight. So we are drinking all the day. 
+            We will move out of it in 5 days.
+        </p>
+	</div>
+    <button type="button" onclick="findWord()">Find!</button> 
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text;
+	    var count;
+	    var i;
+        var word = "in"
+	    function findWord(){
+	        text = document.getElementsByTagName("p")[0].innerHTML;
+	        text = text.toLowerCase();
+	        count = text.match(/in/g)
+	        jsConsole.writeLine("Number of in is : " + count.length);
+	        //var substrings = text.split(word);
+	        //jsConsole.writeLine(substrings.length - 1);
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

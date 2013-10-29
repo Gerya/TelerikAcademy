@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse string</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+    <form action="#" name="myform" >
+        Input string : <input type="text" id ="text"/>
+        <input type="button" onclick="getText()" value="Submit" />
+    </form>	
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text;
+	    function getText() {
+	        text = document.getElementById("text").value;
+	        jsConsole.writeLine("Your text is " + text);
+	        var reverse = [];
+	        for (var i = text.length-1; i >=0; i--) {
+	            reverse.push(text[i]);
+	        }
+	        jsConsole.writeLine("Reversed " + reverse.join(""));
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

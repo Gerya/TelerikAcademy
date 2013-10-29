@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lexicographically smallest and largest property</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        findSmallestBiggestProperty(window);
+        findSmallestBiggestProperty(navigator);
+        findSmallestBiggestProperty(document);
+
+        function findSmallestBiggestProperty(object) {
+            var smallest = "z";
+            var biggest = "A";
+            for (var item in object) {
+                if (item < smallest) {
+                    smallest = item;
+                }
+                if (item > biggest) {
+                    biggest = item;
+                }
+            }
+            jsConsole.writeLine("The smallest lexicographically property in " + object + " is " + smallest);
+            jsConsole.writeLine("The biggest lexicographically property in " + object + " is " + biggest);
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

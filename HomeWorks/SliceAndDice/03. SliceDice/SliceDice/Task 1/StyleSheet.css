@@ -1,0 +1,253 @@
+﻿.clearfix {
+            zoom: 1; /* IE < 8 */
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+a{
+    text-decoration:none;
+}
+    a:hover
+    {
+        text-decoration:underline;
+    }
+body {
+    margin:0;
+    padding:0;
+    font-size:12px;
+    font-family:Verdana,Geneva,sans-serif;
+}
+#wrapper{
+    width:780px;
+    margin:auto;
+}
+#logo{
+    background-color:#59518c;
+    padding:15px 25px 15px 25px;
+    font-size:26px;
+    font-style:italic;
+    font-weight:bold;
+    color:white;
+    float:left;
+}
+#wrapper > header{
+    background-color:#ffffff;
+    background:url("images/header_gradient.png") center right no-repeat;
+    background-size:160px 61px;
+}
+#forum{
+    float:right;
+    font-size:15px;
+    text-transform:uppercase;
+    font-family:Constantia;
+    letter-spacing:0.5ex;
+    font-weight:bold;
+    padding:5px 35px 0 0;
+    color:#7371a7;
+    text-shadow: 1px 2px 2px #e2e8ea;
+}
+    #forum > img
+    {
+            vertical-align:middle;
+    }
+#middle
+{
+        background:#e6def5;
+        height:400px;
+        overflow:hidden;
+}
+    nav{
+        background:#f2f3f7;
+        float:left;
+        padding:0 5px 0 7px;
+        height:100%;
+    }
+    .navigation > span
+    {
+        font-weight:bold;
+        color:#424284;
+
+
+    }
+        .navigation
+        {
+            padding-top:20px;
+        }
+            .navigation > ul{
+                list-style-type: square;
+                list-style-position:inside;
+                font-size:8px;
+                margin:0px;
+                padding:0px;
+            }
+                .navigation > ul > li > a
+                {
+                    color:#006699;
+                    font-size:12px;
+                }
+    section
+    {
+        float:right;
+        width:82%;
+        height:100%;
+    }
+        article
+        {
+            width:70%;
+            float:left;
+            height:100%;
+        }
+            #navigation
+            {
+                padding:9px 0 5px 0;
+            }
+                #navigation > span
+                {
+                    float:left;
+                    color:#6d64a3;
+                    font-weight:bold;
+                }
+                #navigation > ul
+                {
+                    list-style-type:none;
+                    margin:0;
+                    padding:0;
+                }
+                    #navigation > ul>li:first-child
+                    {
+                        border-left: none;
+                    }
+                    #navigation > ul > li
+                    {
+                        padding:0 5px 0 5px;
+                        float:left;
+                        border-left:1px solid #0000cc;
+                    }
+                        #navigation > ul > li>a
+                        {
+                            color: #0000cc;
+                        }
+            #content
+            {
+                padding:10px 5px 10px 10px;
+                background:#f9f4fd;
+                color:#4b3e82;
+                height:100%;
+            }
+                #img
+                {
+                    
+                    float:left;
+                    width:130px;
+                    height:125px;
+                    background:url("images/irena.jpg") no-repeat;
+                    border:1px solid black;
+                    background-size: 130px 125px;
+                    margin-right:10px;
+                }
+                #content>h2
+                {
+                    color:#c41e89;
+                    margin-bottom:0px;
+                }
+                #date
+                {
+                    margin:0;
+                    padding:0;
+                }
+                #content>h3
+                {
+                    margin:0;
+                    padding:0;
+                    font-size:12px;
+                    font-weight:bold;
+                }
+                #content > span>a
+                {
+                    color: #0000cc;
+                }
+    aside
+    {
+        background:#f9f4fd;
+        float:right;
+        width:27%;
+        padding:10px 3px 0 10px;
+        margin:2px 2px 0 0;
+        color:#4b3e82;
+        height:100%;
+        /*box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;*/
+    }
+        .aside
+        {
+            padding-bottom:15px;
+            font-size:11px;
+        }
+            .linkImg
+            {
+                float:left;
+                width:60px;
+                height:63px;
+                border:1px solid black;
+                margin:0 5px 0 0;
+            }
+            aside > ul
+            {
+                margin:0;
+                padding:0;
+                list-style-position:inside;
+                width:50%;
+            }
+            #firstUl
+            {
+                float:left;
+            }
+            #secondUl
+            {
+                float:right;
+            }
+            aside >ul > li
+            {
+                font-size:7px;
+                color:orange;
+                margin:0;
+            }
+            aside >ul > li > a
+            {
+                font-size:11px;
+                color: #0000cc;
+                padding:0;
+                margin-left:-2px;
+            }
+            #first
+            {
+                background:url("images/chucho.jpg") no-repeat;
+                background-size:60px 63px;
+            }
+            #second
+            {
+                background:url("images/6_l8h93k.jpg") no-repeat;
+                background-size:60px 63px;
+            }
+            #third
+            {
+                background:url("images/kirkorov.jpg") no-repeat;
+                background-size:60px 63px;
+            }
+footer
+{
+    background:#59518c;
+    color:white;
+    line-height:33px;
+}
+    footer > div
+    {
+        width:42%;
+        margin:auto;
+    }

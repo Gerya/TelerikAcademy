@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Finds all the occurrences of word in a text</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+            when an unknown printer took a galley of type and scrambled it to make a 
+            type specimen book. It has survived not only five centuries, but also the 
+            leap into electronic typesetting, remaining essentially unchanged. It was 
+            popularised in the 1960s with the release of Letraset sheets containing 
+            Lorem Ipsum passages, and more recently with desktop publishing software 
+            like Aldus PageMaker including versions of Lorem Ipsum.
+        </p>
+    </div>
+    <form action="#" name="myform" >
+        Find word : <input type="text"  id ="Number1"/>
+        <input type="button" onclick="getNumber()" value="Find" />
+    </form>	
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var word;
+        var text;
+        var caseInsensitive = false;
+        function getNumber() {
+            word = document.getElementById("Number1").value;
+            text = document.getElementsByTagName('p')[0].innerHTML;
+            FindWord(text, word);
+            FindWord(text, word, true);
+        }
+        function FindWord(text, word, caseInsensitive) {
+            var counter = 0;
+            if (caseInsensitive == undefined) {
+                var resultword = word.toLowerCase();
+                var textresult = text.toLowerCase().split(/[,.\s]/);
+                for (item in textresult) {
+                    if (textresult[item] == resultword) {
+                        counter++;
+                    }
+                }
+                jsConsole.writeLine("The count of word '" + word + "' (case-insensitive search)  is: " + counter)
+            }
+            else {
+                var pos = text.indexOf(word);
+                while (pos != -1) {
+                    counter++;
+                    pos = text.indexOf(word, pos + 1);
+                }
+                jsConsole.writeLine("The count of word '" + word + "' (case-sensitive search)  is: " + counter)
+            }
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html> 

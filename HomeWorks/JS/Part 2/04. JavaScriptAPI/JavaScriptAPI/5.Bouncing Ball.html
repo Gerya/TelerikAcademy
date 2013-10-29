@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bouncing Ball</title>
+     <style>
+        #wrapper
+        {
+            width: 560px;
+            margin: auto;
+        }
+
+        #buttons
+        {
+            float: right;
+        }
+
+        input[type="button"]
+        {
+            margin-top: 10px;
+            display: block;
+            width: 60px;
+        }
+
+            input[type="button"]:first-child
+            {
+                margin-top: 0;
+            }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <canvas id="gameBoard" width="500" height="600">This text is displayed if your browser does not support   
+            HTML5 Canvas. 
+        </canvas>
+        <div id="buttons">
+            <input type="button" onclick="balls.startGame(); return false;" value="Start" />
+            <input type="button" onclick="balls.stopGame(); return false;" value="Stop" />
+            <input type="button" onclick="balls.fastGame(); return false;" value="Fast" />
+        </div>
+    </div>
+    <script src="Script/BouncingBall.js"></script>
+</body>
+</html>

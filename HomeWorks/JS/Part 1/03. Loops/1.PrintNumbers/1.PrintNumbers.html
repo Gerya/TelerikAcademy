@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Numbers</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <form action="#" name="myform" >
+        Input value for number : <input type="number" min =" 1" max="11" size="3" id ="Number"/>
+        <input type="button" onclick="getNumber()" value="Submit" />
+    </form>	
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var i;
+        function getNumber() {
+            i = parseInt(document.getElementById("Number").value, 10);
+            printNumber()
+        }
+        function printNumber() {
+            var temp = 1;
+            while (temp <= i) {
+                jsConsole.writeLine(temp);
+                temp++;
+            }
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

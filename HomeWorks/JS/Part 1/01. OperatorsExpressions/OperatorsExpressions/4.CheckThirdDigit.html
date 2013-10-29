@@ -1,0 +1,17 @@
+﻿<html>
+<head>
+	<title>Check third digit</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+		var number = 345779;
+		var tempnumber = number / 100;
+		jsConsole.writeLine("Third digit is seven: " + (parseInt(tempnumber % 10, 10) == 7));
+			
+	</script>
+</body>
+
+</html>

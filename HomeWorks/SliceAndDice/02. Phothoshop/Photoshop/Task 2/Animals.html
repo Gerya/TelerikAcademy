@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Animals</title>
+    <style>
+        img
+        {
+            border:0;
+            vertical-align:top;
+        }
+
+        body > div
+        {
+            margin-bottom:30px;
+        }
+
+        body div:first-child
+        {
+            float:left;
+        }
+
+        .imgContainer
+        {
+            width:auto;
+            display:inline-block;
+            height:auto;            
+            position:relative;
+            margin-right:30px;
+        }
+
+        .bottomShadow
+        {
+            width:100%;
+            height:8px;
+            background-image:url(images/center.png);
+            background-repeat: repeat-x;
+            position:absolute;
+            bottom:-8px;
+        }
+
+        .rightShadow
+        {
+            height:100%;
+            width:7px;
+            background-image:url(images/rightUp.png);
+            background-repeat: repeat-y;
+            position:absolute;
+            right:-7px;
+            top:0;
+        }
+
+        .bottomRightCorner
+        {
+            width:7px;
+            height:8px;
+            position:absolute;
+            background-image:url(images/corner.png);
+            background-repeat: no-repeat;
+            background-position:left top;
+            right:-7px;
+            bottom:-8px;
+        }   
+    </style>
+</head>
+<body>
+    <div class="imgContainer">
+        <img src="images/animals.jpg"/>
+        <div class="bottomShadow"></div>
+        <div class="rightShadow"></div>
+        <div class="bottomRightCorner"></div>
+    </div>
+    <div class="imgContainer">
+        <img src="images/animal_101.jpg"/>
+        <div class="bottomShadow"></div>
+        <div class="rightShadow"></div>
+        <div class="bottomRightCorner"></div>
+    </div>
+    <br />
+    <div class="imgContainer">
+        <img src="images/ENDANGERED.jpg" />
+        <div class="bottomShadow"></div>
+        <div class="rightShadow"></div>
+        <div class="bottomRightCorner"></div>
+    </div>
+    <br />
+    <div class="imgContainer">
+        <img src="images/ouooy.jpg" />
+        <div class="bottomShadow"></div>
+        <div class="rightShadow"></div>
+        <div class="bottomRightCorner"></div>
+    </div>
+</body>
+</html>

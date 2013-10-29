@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Print maximal number and minimal number of sequence</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var array = [7,13,22,34,56,-1,45,32,100,200,32,44,56];
+        var max = array[0];
+        var min = array[0];
+        for(var i = 0; i<array.length;i++)
+        {
+            if (array[i]> max)
+            {
+                max = array[i];
+            }
+            if (array[i]< min)
+            {
+                min = array[i];
+            }
+        }
+        jsConsole.writeLine("Max number is : " + max);
+        jsConsole.writeLine("Min number is : " + min);
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

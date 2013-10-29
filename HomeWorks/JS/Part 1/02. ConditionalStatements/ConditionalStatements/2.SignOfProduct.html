@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+	<title>Sign of product</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var firstNumber = 5;
+	    var secondNumber = -6;
+	    var thirdNumber = -2;
+	    if ((firstNumber < 0) ^ (secondNumber < 0) ^ (thirdNumber < 0)) {
+	        jsConsole.writeLine("Sign is -");
+	    }
+	    else if (firstNumber === 0 || secondNumber === 0 || thirdNumber === 0) {
+	        jsConsole.writeLine("One of numbers is zero");
+	    }
+	    else {
+	        jsConsole.writeLine("Sign is +");
+	    }
+	</script>
+</body>
+</html>

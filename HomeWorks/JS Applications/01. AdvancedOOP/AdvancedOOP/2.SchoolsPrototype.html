@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/SchoolPrototypal.js"></script>
+</head>
+<body>
+    <script>
+        var student1 = Object.create(Student);
+        student1.init("Peter", "Petrov", 16, 3);
+        var student2 = Object.create(Student);
+        student2.init("Gosho", "Goshov", 18, 5);
+        var student3 = Object.create(Student);
+        student3.init("Minka", "Ivanova", 17, 5);
+        var teacher1 = Object.create(Teacher);
+        teacher1.init("Ilia", "Ivanov", 40, "History");
+        var teacher2 = Object.create(Teacher);
+        teacher2.init("Milko", "Todorov", 48, "Chemist");
+        console.log(student1.introduce());
+        console.log(student2.introduce());
+        console.log(teacher1.introduce());
+        var classA = Object.create(Course);
+        classA.init("classA", 10, new Array(student1, student2, student3), teacher1);
+        var classB = Object.create(Course);
+        console.log(classA.introduce());
+        classB.init("classB", 2, new Array(student1, student3), teacher2);
+        console.log(classB.introduce());
+        var school = Object.create(School);
+        school.init("133SOU", "Sofia", new Array(classA, classB));
+        console.log(school.introduce());
+    </script>
+</body>
+</html>

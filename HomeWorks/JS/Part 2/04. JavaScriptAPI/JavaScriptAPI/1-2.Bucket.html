@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Script/createDivs.js"></script>
+    
+    <script src="Script/gameEngine.js"></script>
+    <script src="Script/timer.js"></script>
+    <script src="Script/localStorage.js"></script>
+    <link href="Style/trashGame.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <input type="button" onclick="startGame()" value="Start"/>
+            <input type="button" onclick="displayHighscores()" value="Top Scores"/>
+        </header>
+        <div id="gameField">
+            <form name="timeform">
+                <input id="timetextarea" type="text" value="00:00" name="timetextarea"/>
+            </form>
+            <div id="newScore">
+			    <div class="close" onclick="closeNewScore()">x</div>
+                <fieldset>
+                    <legend>Enter new score</legend>
+                    <div>
+	                    <label for="username">Name: </label>
+	                    <input type="text" id="username">
+	                </div>
+	                <div>  
+	                    <label>Time: </label>
+	                    <span id="time"></span>
+	                </div>    
+                    <input type="button" onclick="onSaveButtonClick()" value="Save score" />
+                </fieldset>
+            </div>
+            <div id="scoretable">
+			    <div class="close" onclick="displayHighscores()">x</div>
+			    <fieldset>
+				    <legend>Top Players</legend>
+				    <div id="topPlayers"></div>
+			    </fieldset>
+		    </div>
+            <div id="bucket" ondragover="allowDrop(event)" ondrop="drop(event)" ondragleave="opentIt(this)"></div>
+            <span id="collected">
+            </span>
+            <div id="trashContainer">
+             </div>
+        </div>
+    </div>
+<script src="Script/dragDrop.js"></script>
+</body>
+</html>

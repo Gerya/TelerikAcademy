@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Last number</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="TaskFirst()">FirstTask</button>
+    <form action="#" name="myform" >
+        Input array : <input type="text" id ="arr"/>
+        Input number : <input type="text" id ="number"/>
+        <input type="button" onclick="TaskSecond()" value="SecondTask" />
+    </form>
+    <button type="button" onclick="TaskThree()">TaskThree</button><br />
+    <button type="button" onclick="TaskFour()">TaskFour</button><br />
+    <button type="button" onclick="TaskFive()">TaskFive</button><br />
+    <button type="button" onclick="TaskSix()">TaskSix</button><br />
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        //TASK 1
+    function TaskFirst() {
+            var a = Point(4, 4);
+            var b = Point(1, 1);
+            var line1 = Line(a, b);
+            var line2 = Line(Point(4, 3), Point(0, 4));
+            var line3 = Line(Point(1, 1), Point(7, 7));
+            jsConsole.writeLine(IsFormTriangle(line1, line2, line3));
+            function IsFormTriangle(line1, line2, line3) {
+                var result = new Array(3);
+                for (var i = 0; i < result.length; i++) {
+                    result[i] = CalcDistance(arguments[i].startPoint, arguments[i].endPoint);
+                }
+                //sort array
+                result = result.sort(function (a, b) { return a - b; });
+                if (result[2] < result[1] + result[0]) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            function CalcDistance(start, end) {
+                return Math.sqrt((end.x - start.x) * (end.x - start.x) + (end.y - start.y) * (end.y - start.y));
+            }
+            function Point(x, y) {
+                return {
+                    x: x,
+                    y: y,
+                    toString: function () { return "x: " + x + " y: " + y }
+                };
+            }
+            function Line(start, end) {
+                return {
+                    startPoint: start,
+                    endPoint: end
+                };
+            }
+    }
+        //TASK 2
+    function TaskSecond() {
+        var inputArray = document.getElementById("arr").value.split(",");
+        var value = document.getElementById("number").value;
+        function remove(value) {
+            for (var i = 0; i < this.length; i++) {
+                if (this[i] == value) {
+                    this.splice(i, 1);
+                    i--;
+                }
+            }
+            return this;
+        }
+        Array.prototype.Remove = remove;
+        resultArray = inputArray.Remove(value);
+        jsConsole.writeLine(resultArray);
+    }
+        //TASK 3
+    function TaskThree() {
+        myObject = {
+            Name: "Petur",
+            Age: "20",
+            Work: {
+                name: "Telerik",
+                street: "Ivan Asen 22"
+            }
+        }
+        var myCopy = DeepCopy(myObject);
+        jsConsole.writeLine("Object copied");
+        function DeepCopy(obj) {
+            if (obj == null || typeof (obj) != 'object')
+                return obj;
+
+            var temp = obj.constructor();
+
+            for (var key in obj)
+                temp[key] = DeepCopy(obj[key]);
+            return temp;
+        }
+        myObject.Name = "Mitko";
+        for (item in myObject) {
+            jsConsole.writeLine(myObject[item]);
+        }
+        for (item in myCopy) {
+            jsConsole.writeLine(myCopy[item]);
+        }
+    }
+        //TASK 4
+    function TaskFour() {
+        myObject = {
+            name: "Ivan",
+            age: "20",
+            shool: "144",
+            eyes:"blue"
+        }
+        var properties = "name"
+        for (item in myObject) {
+            jsConsole.writeLine(item + " : "+ myObject[item]);
+
+        }
+        Object.prototype.CheckProp = CheckProp;
+        jsConsole.writeLine("Is there properties \"" + properties + "\" : " + myObject.CheckProp(properties));
+        function CheckProp(properties) {
+            if (properties in this) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+        //TASK 5
+    function TaskFive() {
+        var persons = [
+            { firstname: "Pesho", lastname: "Peshev", age: 132 },
+            { firstname: "Gosho", lastname: "Minchev", age: 16 },
+            { firstname: "Milka", lastname: "Sladunkova", age: 6 },
+            { firstname: "Stefka", lastname: "Todorova", age: 36 }
+        ];
+        FindYoungest(persons);
+        function FindYoungest(persons) {
+            var max = 500;
+            var person = 0;
+            for (item in persons) {
+                if (max > persons[item].age) {
+                    max = persons[item].age;
+                    person = item;
+                }
+            }
+            jsConsole.writeLine(persons[person].firstname+" " + persons[person].lastname + " "+ persons[person].age);
+        }
+    }
+        //TASK 6
+    function TaskSix() {
+        var persons = [
+        { firstname: "Ivo", lastname: "Zmeia", age: 132 },
+        { firstname: "Gosho", lastname: "Petrov", age: 32 },
+        { firstname: "Bay", lastname: "Ivan", age: 81 }
+        ];
+        var groupedByFname = group(persons, "firstname");
+        var groupedByLname = group(persons, "lastname");
+        var groupedByAge = group(persons, "age");
+        jsConsole.writeLine("Persons sorted check console");
+        function group(persons, prop) {
+            var result = new Array();
+            switch (prop) {
+                case "firstname": {
+                    var sorted = persons.sort(function (a, b) { return a.firstname.localeCompare(b.firstname) });
+                    result["byFirstname"] = [];
+                    for (var i = 0; i < sorted.length; i++) {
+                        result["byFirstname"].push({ firstname: sorted[i].firstname, lastname: sorted[i].lastname, age: sorted[i].age });
+                    }
+
+                    console.log(result);
+                    return result;
+
+                }
+                case "lastname": {
+                    result["byLastname"] = [];
+                    var sorted = persons.sort(function (a, b) { return a.firstname.localeCompare(b.lastname) });
+                    for (var i = 0; i < sorted.length; i++) {
+                        result["byLastname"].push({ firstname: sorted[i].firstname, lastname: sorted[i].lastname, age: sorted[i].age });
+                    }
+                    console.log(result);
+                    return result;
+
+                }
+                case "age": {
+                    result["byAge"] = [];
+                    var sorted = persons.sort(function (a, b) { return a.age - b.age });
+                    for (var i = 0; i < sorted.length; i++) {
+                        result["byAge"].push({ firstname: sorted[i].firstname, lastname: sorted[i].lastname, age: sorted[i].age });
+                    }
+                    console.log(result);
+                    return result;
+
+                }
+            }
+        }
+    }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html> 

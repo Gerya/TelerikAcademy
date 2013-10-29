@@ -1,0 +1,21 @@
+﻿<html>
+<head>
+	<title>Find number is prime</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var number = 7;
+	    var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+	    var element = primes.indexOf(number);
+	    if (element>0) {
+	            jsConsole.writeLine(number+" is prime")
+	        }
+	    else {
+	            jsConsole.writeLine(number + " isn't prime")
+	        }
+	</script>
+</body>
+</html>

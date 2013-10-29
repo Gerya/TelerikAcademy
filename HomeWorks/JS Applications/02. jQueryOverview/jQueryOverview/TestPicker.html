@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="InsertDomElements/jquery-1.10.1.min.js"></script>
+    <link href="ColorPicker/colorStyle.css" rel="stylesheet" />
+    <script src="ColorPicker/colorpicker.js"></script>
+</head>
+<body>
+        <div>
+		<pre class='prettyprint hide' id='code-heading'>
+Select color:<input type='color' class='basic' value='#f594d0' />
+		</pre>		
+	    </div>
+    <script>
+        function changeBGColor() {
+            var color = $(".basic").css("background-color");
+            $("body").css({ "background-color": color });
+        }
+        $(".basic").on('change', changeBGColor);
+    </script>
+</body>
+</html>

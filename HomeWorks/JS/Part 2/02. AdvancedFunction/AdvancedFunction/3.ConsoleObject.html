@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Console object</title>
+</head>
+<body>
+    <script>
+        var specialConsole = (function () {
+
+            function format() {
+                var formattedString = arguments[0].toString() || "";
+                for (var i = 0; i < arguments.length; i++) {
+                    formattedString = formattedString.replace(new RegExp("\\{" + i + "\\}", "g"), arguments[i+1]);
+                }
+
+                return formattedString;
+            }
+
+            function writeLine() {
+                var result = format.apply(null,arguments);
+                console.log(result);
+            }
+
+            function writeError() {
+                var result = format.apply(null, arguments);
+                console.error(result);
+            }
+
+            function writeWarning() {
+                var result = format.apply(null, arguments);
+                console.warn(result);
+            }
+
+            return {
+                writeLine: writeLine,
+                writeError: writeError,
+                writeWarning: writeWarning
+            };
+        })();
+        specialConsole.writeLine("alabala");
+        specialConsole.writeLine("alabala {0}", "brum");
+        specialConsole.writeError("Error: {0}", "Something happened");
+        specialConsole.writeWarning("Warning: {0}", "A warning");
+    </script>
+</body>
+</html>

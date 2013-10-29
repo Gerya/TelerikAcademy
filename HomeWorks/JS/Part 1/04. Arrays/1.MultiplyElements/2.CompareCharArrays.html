@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lexicographically smallest and largest property</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        CompareArrays();
+        function CompareArrays() {
+            var charArray = ['a','b','c','d','e','f'];
+            var charArraySecond = ['a', 'b', 'c', 'l', 'm', 'n'];
+            for (var i = 0; i < charArray.length; i++) {
+                if (charArray[i] == charArraySecond[i]) {
+                    jsConsole.writeLine(charArray[i] + " and " + charArraySecond[i] +" are equal");
+                }
+                else if (charArray[i] > charArraySecond[i]) {
+                    jsConsole.writeLine(charArray[i] + " is lexicographically after " + charArraySecond[i]);
+                }
+                else {
+                    jsConsole.writeLine(charArray[i] + " is lexicographically before " + charArraySecond[i]);
+                }
+            }
+            for (item in newArray) {
+                jsConsole.writeLine(item + ": " + newArray[item]);
+            }
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Check the brackets are correctly</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+    <form action="#" name="myform" >
+        Input string : <input type="text" id ="text"/>
+        <input type="button" onclick="getText()" value="Submit" />
+    </form>	
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text;
+	    function getText() {
+	        text = document.getElementById("text").value;
+	        if (text[0] == ")") {
+	            jsConsole.writeLine("Expression isn't correct");
+	        }
+	        else {
+	            var temp = [];
+	            for (var i = 0; i < text.length; i++) {
+	                if (text[i] == "(") {
+	                    temp.push("(");
+	                }
+	                else if (text[i] == ")") {
+	                    if (temp.length == 0) {
+	                        temp.push("(");
+	                        break;
+	                    }
+	                    else {
+	                        temp.pop();
+	                    }
+	                }
+	            }
+	            if (temp.length == 0) {
+	                jsConsole.writeLine("Expression is correct");
+	            }
+	            else {
+	                jsConsole.writeLine("Expression isn't correct");
+	            }
+	        }
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

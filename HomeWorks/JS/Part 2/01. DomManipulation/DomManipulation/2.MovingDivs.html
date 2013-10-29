@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+	div{
+		width:60px;
+		height :60px;
+		position : absolute;
+        border-radius:40px;
+	}
+    </style>
+</head>
+<body>
+    <section id="container"></section>
+    <script>
+        var container = document.getElementById('container');
+        var documentFragment = document.createDocumentFragment();
+        var circleRadius = 200;
+        var pageVisibleSize = getPageSize();
+        var centerX = pageVisibleSize.height / 2;
+        var centerY = pageVisibleSize.width / 2;
+        var divCount = 5;
+        var angleBetweenTwoDivs = 360 / divCount;
+        var anglePositionInDegrees = angleBetweenTwoDivs;
+        var anglePositionInRadians = angleBetweenTwoDivs * Math.PI / 180.0;
+        var allAnglesInDegrees = new Array(divCount);
+        var index;
+
+        //drawing divs
+        for (index = 0; index < divCount; index++) {
+            var newDiv = document.createElement('div');
+
+            allAnglesInDegrees[index] = anglePositionInDegrees;
+            newDiv.style.top = circleRadius * Math.cos(anglePositionInRadians) + centerX + "px";
+            newDiv.style.left = circleRadius * Math.sin(anglePositionInRadians) + centerY + "px";
+            newDiv.style.backgroundColor = generateRandomColor();
+            documentFragment.appendChild(newDiv);
+            anglePositionInDegrees += angleBetweenTwoDivs;
+            anglePositionInRadians = anglePositionInDegrees * Math.PI / 180.0;
+        }
+
+        container.appendChild(documentFragment);
+
+        // start moving divs
+        var allDrawnDivs = document.getElementsByTagName('div');
+        window.setInterval(rotateDivs, 100);
+
+        function rotateDivs() {
+            for (index = 0; index < allDrawnDivs.length; index++) {
+
+                allAnglesInDegrees[index]+=5;
+                if (allAnglesInDegrees[index] > 360) {
+                    allAnglesInDegrees[index] = 0;
+                }
+
+                anglePositionInRadians = allAnglesInDegrees[index] * Math.PI / 180.0;
+
+                allDrawnDivs[index].style.top = (circleRadius * Math.cos(anglePositionInRadians) + centerX) + "px";
+                allDrawnDivs[index].style.left = (circleRadius * Math.sin(anglePositionInRadians) + centerY) + "px";
+                allDrawnDivs[index].style.backgroundColor = generateRandomColor();
+            }
+        }
+        function generateRandomColor() {
+            var red = (Math.random() * 256) | 0;
+            var green = (Math.random() * 256) | 0;
+            var blue = (Math.random() * 256) | 0;
+
+            return "rgb(" + red + "," + green + "," + blue + ")";
+        }
+        function getPageSize() {
+            var size = { width: 0, height: 0 };
+
+            if (window.innerWidth && window.innerHeight) {
+                size.width = window.innerWidth;
+                size.height = window.innerHeight;
+            } else {
+                size.width = document.documentElement.offsetWidth;
+                size.height = document.documentElement.offsetHeight;
+            }
+
+            return size;
+        }
+
+    </script>
+</body>
+</html>

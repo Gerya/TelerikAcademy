@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation - Creating random divs</title>
+	<style>
+		div
+		{
+            text-align : center;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="tb-box-count" />
+	<a href="#" id="generate-boxes-btn" onclick="onGenerateBoxesButtonClick()">Generate boxes</a>
+	<div id="content">
+	</div>
+	<script>
+	    var pageVisibleSize = getPageSize();
+	    var maxWidth = pageVisibleSize.width - 140;
+	    var maxHeight = pageVisibleSize.height - 140;
+	    var index;
+
+	    function onGenerateBoxesButtonClick() {
+	        var contentDiv = document.getElementById("content");
+
+	        while (contentDiv.firstChild) {
+	            contentDiv.removeChild(contentDiv.firstChild);
+	        }
+	        var count = (document.getElementById("tb-box-count").value | 0) || 5;
+
+	        for (index = 0; index < count; index++) {
+	            var div = document.createElement("div");
+	            makeRandomDiv(div);
+	            contentDiv.appendChild(div);
+	        }
+	        return false;
+	    }
+
+	    function makeRandomDiv(div) {
+	        div.style.width = generateRandomNumber(20, 100) + "px";
+	        div.style.height = generateRandomNumber(20, 100) + "px";
+	        div.style.lineHeight = div.style.height;
+	        div.style.backgroundColor = generateRandomColor();
+	        div.style.position = "absolute";
+	        div.style.top = generateRandomNumber(50, maxHeight) + "px";
+	        div.style.left = generateRandomNumber(20, maxWidth) + "px";
+	        div.style.color = generateRandomColor();
+	        var text = document.createTextNode('div');
+	        div.style.fontWeight = "bold";
+	        div.appendChild(text);
+	        div.style.borderRadius = generateRandomNumber(0, 50) + "px";
+	        div.style.border = generateRandomNumber(1, 20) + "px solid " + generateRandomColor();
+	    }
+
+	    function generateRandomColor() {
+	        var red = (Math.random() * 256) | 0;
+	        var green = (Math.random() * 256) | 0;
+	        var blue = (Math.random() * 256) | 0;
+
+	        return "rgb(" + red + "," + green + "," + blue + ")";
+	    }
+
+	    function generateRandomNumber(start, end) {
+	       var number = Math.floor(Math.random() * (end - start + 1)) + start;
+	        return number;
+	    }
+
+	    function getPageSize() {
+	        var size = { width: 0, height: 0 };
+
+	        if (window.innerWidth && window.innerHeight) {
+	            size.width = window.innerWidth;
+	            size.height = window.innerHeight;
+	        } else {
+	            size.width = document.documentElement.offsetWidth;
+	            size.height = document.documentElement.offsetHeight;
+	        }
+
+	        return size;
+	    }
+	</script>
+</body>
+</html>

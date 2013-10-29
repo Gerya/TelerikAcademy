@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Selection sort.</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        FindMaximalSequence();
+        function FindMaximalSequence() {
+            var min, temp;
+            var numbers = [3, 2, 3, 4, 2, 2, 4];
+            for (var i = 0; i < numbers.length - 1; i++) {
+                min = i;
+                for (var j = i + 1; j < numbers.length; j++) {
+                    if (numbers[j] < numbers[min]) {
+                        min = j;
+                    }
+                }
+                temp = numbers[i];
+                numbers[i] = numbers[min];
+                numbers[min] = temp;
+            }
+            jsConsole.writeLine("The maximal sequence is:");
+            for (var i = 0; i < numbers.length; i++) {
+                jsConsole.write(numbers[i] + " ");
+            }
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

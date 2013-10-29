@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Ul by template</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+        <div data-type="template" id="list-item">
+         <strong>-{name}-</strong> <span>-{age}-</span>
+        </div>
+	</div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text = "";
+	    var result = "";
+	        function createPerson(name, age) {
+	            return {
+	                name: name,
+                    age: age
+	            }
+	        }
+	        function generateList(people, template) {
+	            result= '<ul>';
+	            for (i = 0; i < people.length; ++i) {
+	                result += '<li>';
+	                result += template.replace("-{name}-", people[i].name);
+	                result = result.replace("-{age}-", people[i].age);
+ 	                result +='</li>';
+	            }
+	            result +='</ul>';
+	            return result;
+	        }
+
+	        var people = [
+                createPerson('Lilly Manolova', 22),
+                createPerson('Petur Petrov', 43),
+                createPerson('Milica Dafova', 21)
+	        ];
+	        var tmpl = document.getElementById("list-item").innerHTML;
+	        var peopleList = generateList(people, tmpl);
+	        //peopleList = "<ul><li><strong>Peter</strong> <span>14</span></li><li>…</li>…</ul>"
+	        jsConsole.writeLine(peopleList);
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

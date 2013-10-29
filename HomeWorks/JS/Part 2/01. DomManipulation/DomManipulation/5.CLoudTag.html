@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cloud Tag</title>
+</head>
+<body>
+    <div id="tags"></div>
+     <script type="text/javascript">
+         var tags = ["cms", "javascript", "js", "ASP.NET MVC", ".net", ".net", "css", "wordpress", "xaml", "js", "http", "web", "asp.net", "asp.net MVC", "ASP.NET MVC", "wp", "javascript", "js", "cms", "html", "javascript", "http", "http", "http", "CMS"];
+         var tag = generateTagCloud(tags, 15, 45);
+
+         function generateTagCloud(tags, minSize, maxSize) {
+             var documentFragment = document.createDocumentFragment();
+             maxSize = parseFloat(maxSize);
+             minSize = parseFloat(minSize);
+             var maxCount = 1;
+             var count = 1;
+             var index;
+
+             tags.sort();
+             for (index = 0; index < tags.length - 1; index++) {
+                 if (tags[index].toLowerCase() == tags[index + 1].toLowerCase()) {
+                     count++;
+                     if (count > maxCount) {
+                         maxCount = count;
+                     }
+                 } else {
+                     count = 1;
+                 }
+             }
+
+             for (index = 0; index < tags.length - 1; index++) {
+                 if (tags[index] == tags[index + 1]) {
+                     count++;
+                     if (count > maxCount) {
+                         maxCount = count;
+                     }
+                 } else {
+                     var span = document.createElement("span");
+                     span.innerHTML = tags[index];
+                     span.style.fontSize = (maxSize - minSize) / (maxCount - 1) * (count - 1) + minSize + "px";
+                     span.style.marginRight = "10px";
+                     documentFragment.appendChild(span);
+                     count = 1;
+                 }
+             }
+             var container = document.getElementById("tags");
+             container.style.margin = 20 + "px " + 0 + " " + 0 + " " + 20 + "px";
+             container.style.width = 300 + "px";
+             container.appendChild(documentFragment);
+         }
+    </script>
+</body>
+</html>

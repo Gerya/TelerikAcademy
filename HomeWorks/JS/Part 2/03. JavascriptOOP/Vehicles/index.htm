@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="vehicles.js"></script>
+</head>
+<body>
+    <script>
+        console.log("The Batmobile");
+        var batmobile = new vehicles.LandVehicle(
+            new vehicles.Wheel(10),
+            new vehicles.Wheel(10),
+            new vehicles.Wheel(10),
+            new vehicles.Wheel(10));
+        console.log(batmobile.getSpeed());
+        console.log("The Batmobile is accelerating");
+        batmobile.accelerate();
+        console.log(batmobile.getSpeed());
+        console.log("The Batmobile is accelerating");
+        batmobile.accelerate();
+        console.log(batmobile.getSpeed());
+
+        console.log("The Batplane");
+        var batplane = new vehicles.AirVehicle(
+            new vehicles.PropellingNozzle(250));
+        console.log(batplane.getSpeed());
+        console.log("The Batplane is accelerating");
+        batplane.accelerate();
+        console.log(batplane.getSpeed());
+        console.log("The Batplane is accelerating");
+        batplane.accelerate();
+        console.log(batplane.getSpeed());
+        console.log("The Batplane's afterburner is activated");
+        batplane.activateAfterburner();
+        console.log("The Batplane is accelerating");
+        batplane.accelerate();
+        console.log(batplane.getSpeed());
+
+        console.log("The Batboat");
+        var batboat = new vehicles.WaterVehicle(
+            new vehicles.Propeller(5),
+            new vehicles.Propeller(5),
+            new vehicles.Propeller(5),
+            new vehicles.Propeller(5),
+            new vehicles.Propeller(5));
+        console.log(batboat.getSpeed());
+        console.log("The Batboat is accelerating");
+        batboat.accelerate();
+        console.log(batboat.getSpeed());
+        console.log("The Batboat is accelerating");
+        batboat.accelerate();
+        console.log(batboat.getSpeed());
+        console.log("The Batboat's propellers spin direction changed");
+        batboat.togglePropellerSpinDirection();
+        console.log("The Batboat is accelerating");
+        batboat.accelerate();
+        console.log(batboat.getSpeed());
+
+        console.log("The Batamphibia");
+        var batamphibia = new vehicles.AmphibiousVehicle(
+            new vehicles.Wheel(10),
+            new vehicles.Wheel(10),
+            new vehicles.Wheel(10),
+            new vehicles.Wheel(10),
+            new vehicles.Propeller(5),
+            new vehicles.Propeller(5),
+            new vehicles.Propeller(5),
+            new vehicles.Propeller(5));        
+        console.log(batamphibia.getSpeed());
+        console.log("The Batamphibia is accelerating");
+        batamphibia.accelerate();
+        console.log(batamphibia.getSpeed());
+        console.log("The Batamphibia is accelerating");
+        batamphibia.accelerate();
+        console.log(batamphibia.getSpeed());
+        console.log("The Batamphibia is transitioning to water");
+        batamphibia.transitionToWater();
+        console.log("The Batamphibia is accelerating");
+        batamphibia.accelerate();
+        console.log(batamphibia.getSpeed());
+        console.log("The Batamphibia is accelerating");
+        batamphibia.accelerate();
+        console.log(batamphibia.getSpeed());
+        console.log("The Batamphibia is transitioning to land");
+        batamphibia.transitionToLand();
+        console.log("The Batamphibia is accelerating");
+        batamphibia.accelerate();
+        console.log(batamphibia.getSpeed());
+        console.log("The Batamphibia is accelerating");
+        batamphibia.accelerate();
+        console.log(batamphibia.getSpeed());
+    </script>
+</body>
+</html>

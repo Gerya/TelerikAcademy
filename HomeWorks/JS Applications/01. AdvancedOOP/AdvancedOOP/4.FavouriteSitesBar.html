@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/favourites.js"></script>
+</head>
+<body>
+    <div id="favourites">
+    </div>
+    <script>
+        var favourites = new controls.FavouriteSitesBar();
+        var top3Folder = favourites.createFolder("Top 3 Websites");
+        top3Folder.addUrl("Facebook", "http://facebook.com");
+        top3Folder.addUrl("Google", "http://google.com");
+        top3Folder.addUrl("Youtube", "http://youtube.com");
+
+        var searchEnginesFolder = favourites.createFolder("Search Engines");
+        searchEnginesFolder.addUrl("Yahoo", "http://yahoo.com");
+        searchEnginesFolder.addUrl("Google", "http://google.com");
+        searchEnginesFolder.addUrl("Bing", "http://bing.com");
+
+        favourites.display("#favourites");
+        console.log(favourites);
+    </script>    
+</body>
+</html>

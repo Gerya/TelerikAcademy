@@ -1,0 +1,55 @@
+﻿<html>
+<head>
+	<title>Sign of product</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>				 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var a = 6;
+	    var b = -1;
+	    var c = 12;
+	    if (a == b || b == c || a == c)
+	    {
+	        jsConsole.writeLine("Two of your numbers are equal");
+	    }
+	    else if (a < b)
+	    {
+	        if (b < c)
+	        {
+	            jsConsole.writeLine("Descend order is " + a + " "+ b +" " + c);
+	        }
+	        else
+	        {
+	            if (a < c)
+	            {
+	                jsConsole.writeLine("Descend order is " +  a +" "+ c + " "+ b);
+	            }
+	            else
+	            {
+	                jsConsole.writeLine("Descend order is " + c + " " + a + " " + b);
+	            }
+	        }
+	    }
+	    else //(b < a)
+	    {
+	        if (a > c)
+	        {
+	            if (b < c)
+	            {
+	                jsConsole.writeLine("Descend order is " + b + " " + c + " " + a);
+	            }
+	            else
+	            {
+	                jsConsole.writeLine("Descend order is " + c + " " + b + " " + a);
+	            }
+	        }
+	        else
+	        {
+	            jsConsole.writeLine("Descend order is " + b + " " + a + " " + c);
+	        }
+	    }
+	  </script>
+</body>
+</html>

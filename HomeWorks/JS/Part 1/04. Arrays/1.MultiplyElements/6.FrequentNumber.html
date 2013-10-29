@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Most frequent number in an array</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        MostFrequentNumber();
+        function MostFrequentNumber() {
+            function orderBy(a, b) {
+                return (a == b) ? 0 : (a > b) ? 1 : -1
+            };
+            var numbers = [3, 2, 3, 4, 2, 2, 4];
+            numbers.sort(orderBy);
+            var count = 1, bestCount = 0, number = 0;
+            for (var i = 0; i < numbers.length - 1; i++) {
+                if (numbers[i] == numbers[i + 1]) {
+                    count++;
+                }
+                else{
+                        count = 1;
+                }
+                if (count > bestCount){
+                    bestCount = count;
+                    number = numbers[i];
+                }
+            }
+            jsConsole.writeLine("Number "+number+" is most frequent in array ("+bestCount+" times)");
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

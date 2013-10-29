@@ -1,0 +1,15 @@
+﻿<html>
+<head>
+	<title>Find third bit</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var number = 15;
+	    var mask = 1 << 3;
+	    jsConsole.writeLine("Third digit is zero: "+((number & mask) === 0));
+	</script>
+</body>
+</html>

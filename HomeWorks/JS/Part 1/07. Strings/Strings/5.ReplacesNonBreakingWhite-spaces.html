@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Replaces non breaking white-spaces</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+        <p>
+        Lorem&nbsp;Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem&nbsp;Ipsum has been the industry's standard dummy text ever since the 1500s.
+        When&nbsp;an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+	</div>
+    <button type="button" onclick="changeText()">Change!</button> 
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text;
+	    var result = "";
+	    function changeText() {
+	        text = document.getElementsByTagName("p")[0].innerHTML;
+	        result = text.split('&nbsp;').join('&amp;nbsp;');
+	        jsConsole.writeLine(result);
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

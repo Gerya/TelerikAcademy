@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+	<title>Digit with English name</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console"></div>
+    <p> 
+        Enters the coefficients a, b and c of a quadratic equation a*x2 + b*x + c = 0
+    </p>
+    <form action="#" name="myform" >
+        a: <input type="number" min =" 1" max="11" size="3" id ="Number1"/>
+        b: <input type="number" min =" 1" max="11" size="3" id ="Number2"/>
+        c: <input type="number" min =" 1" max="11" size="3" id ="Number3"/>
+        <input type="button" onclick="getNumber()" value="Submit" />
+    </form>	
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var a,b,c,x1,x2,D;
+	    function getNumber() {
+	        a = parseInt(document.getElementById("Number1").value, 10);
+	        b = parseInt(document.getElementById("Number2").value, 10);
+	        c = parseInt(document.getElementById("Number3").value, 10);
+	        D = Math.pow(b, 2) - (4 * a * c);
+	        if (D < 0) {
+	            jsConsole.writeLine("No real roots");
+	        }
+	        else if (D == 0) {
+	            x1 = -b / (2 * a);
+	            jsConsole.writeLine("One real root: " + x1);
+	        }
+	        else {
+	            x1 = (-b + Math.sqrt(D)) / (2 * a);
+	            x2 = (-b - Math.sqrt(D)) / (2 * a);
+	            jsConsole.writeLine("Two real roots: " + x1 + " and " + x2);
+	        }
+               
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

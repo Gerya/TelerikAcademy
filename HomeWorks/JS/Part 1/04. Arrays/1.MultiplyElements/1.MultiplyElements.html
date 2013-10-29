@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lexicographically smallest and largest property</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        ChangeNumbers();
+        function ChangeNumbers() {
+            var array = new Array(20);
+            var newArray= new Array(20);
+            for (var i = 0; i < 20; i++) {
+                array[i] = i;
+                newArray[i] = array[i] * 5;
+            }
+            for (item in newArray) {
+                jsConsole.writeLine(item +": "+ newArray[item]);
+            }
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

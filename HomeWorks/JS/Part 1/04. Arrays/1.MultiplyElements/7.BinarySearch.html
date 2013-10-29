@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Binary search </title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+    <script>
+        BinarySearch();
+        function BinarySearch() {
+            function orderBy(a, b) {
+                return (a == b) ? 0 : (a > b) ? 1 : -1
+            };
+            var arr = [ -1, 1, 4, 5, 8, 10, 12, 20, 21, 30, 100]; // array
+            var target = -1;                                        //searched target                 
+            arr.sort(orderBy);
+            var index = MyBynarySearch(arr, target);
+            if (index >= 0)
+            {
+                jsConsole.writeLine("Index of searched element is " + index);
+            }
+            else
+            {
+                jsConsole.writeLine("There has no such number in given Array!");
+            }
+        }
+        function MyBynarySearch(arr,value){
+            var start=0, end = arr.length - 1, middle = 0;
+        while (start <= end)
+        {
+            middle = Math.floor(start + (end - start) / 2);
+            if (value == arr[middle])
+            {
+                return middle;
+            }
+            else if (value < arr[middle])
+            {
+                end = middle - 1;
+            }
+            else
+            {
+                start = middle + 1;
+            }
+        }
+        return -1;
+        }
+        function clearForm() {
+            jsConsole.clear();
+        }
+    </script>
+</body>
+</html>

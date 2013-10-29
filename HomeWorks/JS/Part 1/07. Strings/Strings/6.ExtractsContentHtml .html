@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Extracts the content of a html </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+        <p>
+        <html><head><title>Sample site</title></head><body><div>text<div>more text
+        </div>and more...</div>in body</body></html>
+        </p>
+	</div>
+    <button type="button" onclick="changeText()">Change!</button> 
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text;
+	    var result = [];
+	    function changeText() {
+	        text = "<html><head><title>Sample site </title></head><body><div>text <div>more text </div>and more... </div>in body </body></html>";
+	        var inTag = false;
+	        var outTag = true;
+	        for (var i = 0; i < text.length; i++){
+                if (outTag){
+                    if (text[i] == '<') {
+                        inTag = true;
+                        outTag = false;
+	                }
+                    else{
+                        result.push(text[i]);
+                    }
+                }
+                if (inTag){
+                    if (text[i] == '>') {
+                        inTag = false;
+                        outTag = true;
+                    }
+                }
+            }
+	        jsConsole.writeLine(result.join(''));
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

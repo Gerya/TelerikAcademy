@@ -1,0 +1,54 @@
+﻿/*.no-cssgradients #site-header
+{
+    zoom:1;
+    
+}
+body div#wrapper header#site-header nav ul li {
+    *display: inline;
+    zoom: 1;
+    padding-left:10px;
+}
+.no-borderradius body div#wrapper aside{	
+	behavior:url("PIE_uncompressed.htc");
+    filter:none;
+	-pie-background: linear-gradient(top, #89ffb0 0%, #effff4 100%);
+}*/
+.no-cssgradients body div#wrapper header#site-header {
+    -pie-background: linear-gradient(top, #0b6f0b 0%, #89ffb0 75%);
+    behavior: url(PIE.htc);
+}
+
+body div#wrapper aside, body div#wrapper header#site-header {
+     filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.no-borderradius aside, .no-cssgradients aside
+{
+    -pie-background: linear-gradient(top, #89ffb0 0%, #effff4 100%);
+    behavior: url(PIE.htc);
+}
+
+body div#wrapper header#site-header nav ul {
+    *zoom:1;
+}
+
+/*body div#wrapper header#site-header nav ul:after {
+    content: "";
+    display:block;
+    height:0;
+    clear:both;
+}*/
+
+body div#wrapper header#site-header nav ul li {
+    
+    *display:inline;
+    zoom:1;
+    
+    /*float:left;*/
+    margin-right:5px;
+}
+
+body div#wrapper section {
+    width:auto;
+    zoom:0;
+}

@@ -1,0 +1,162 @@
+﻿body
+{
+    margin:0;
+    padding:0;
+    font-family:Verdana;
+    font-size:14px;
+    font-weight:bold;
+}
+#wrapper {
+    width:520px;
+    margin:auto;
+    margin-top:40px;
+    padding:20px;
+    border-radius:20px;
+    background: #f8ffe8; /* Old browsers */
+    background: -moz-linear-gradient(top, #f8ffe8 0%, #e3f5ab 33%, #b7df2d 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8ffe8), color-stop(33%,#e3f5ab), color-stop(100%,#b7df2d)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #f8ffe8 0%,#e3f5ab 33%,#b7df2d 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8ffe8', endColorstr='#b7df2d',GradientType=0 ); /* IE6-9 */
+}
+ul {
+    zoom:1;
+}
+ul:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+li {
+    margin:0 5px 5px 0;
+    padding:5px;
+    width:140px;
+    list-style-type:none;
+    float:left;
+    border:1px solid gray;
+    border-radius:10px;
+    font-size:12px;
+    font-weight:normal;
+    background-color:white;
+    position: relative;
+}
+span {
+    position: absolute;
+    right: 10px;
+}
+.img {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    background:url("sprite.png") no-repeat;
+}
+#comments li:nth-child(1) .img{
+    background-position: 0 0;
+}
+#comments li:nth-child(2) .img{
+     background-position: -16px 0;
+}
+#comments li:nth-child(3) .img{
+     background-position: -32px 0;
+}
+#comments li:nth-child(4) .img{
+     background-position: -48px 0;
+}
+#comments li:nth-child(5) .img{
+     background-position: -64px 0;
+}
+#comments li:nth-child(6) .img{
+     background-position: -80px 0;
+}
+#comments li:nth-child(7) .img{
+     background-position: -96px 0;
+}
+#folder li:nth-child(1) .img{
+     background-position: -112px 0;
+}
+#folder li:nth-child(2) .img{
+     background-position: -128px 0;
+}
+#folder li:nth-child(3) .img{
+     background-position: -144px 0;
+}
+#folder li:nth-child(4) .img{
+     background-position: -160px 0;
+}
+#folder li:nth-child(5) .img{
+     background-position: -176px 0;
+}
+#group li:nth-child(1) .img{
+     background-position: -176px 0;
+}
+#group li:nth-child(2) .img{
+     background-position: -192px 0;
+}
+#group li:nth-child(3) .img{
+     background-position: -208px 0;
+}
+#group li:nth-child(4) .img{
+     background-position: -224px 0;
+}
+#page li:nth-child(1) .img{
+     background-position: -240px 0;
+}
+#page li:nth-child(2) .img{
+     background-position: -256px 0;
+}
+#page li:nth-child(3) .img{
+     background-position: -272px 0;
+}
+#page li:nth-child(4) .img{
+     background-position: -288px 0;
+}
+#page li:nth-child(5) .img{
+     background-position: -304px 0;
+}
+#page li:nth-child(6) .img{
+     background-position: -320px 0;
+}
+#page li:nth-child(7) .img{
+     background-position: -336px 0;
+}
+#page li:nth-child(8) .img{
+     background-position: -352px 0;
+}
+#page li:nth-child(9) .img{
+     background-position: -368px 0;
+}
+#page li:nth-child(10) .img{
+     background-position: -384px 0;
+}
+#page li:nth-child(11) .img{
+     background-position: -400px 0;
+}
+#page li:nth-child(12) .img{
+     background-position: -416px 0;
+}
+#page li:nth-child(13) .img{
+     background-position: -432px 0;
+}
+#page li:nth-child(14) .img{
+     background-position: -448px 0;
+}
+#page li:nth-child(15) .img{
+     background-position: -464px 0;
+}
+#user li:nth-child(1) .img{
+     background-position: -480px 0;
+}
+#user li:nth-child(2) .img{
+     background-position: -496px 0;
+}
+#user li:nth-child(3) .img{
+     background-position: -512px 0;
+}
+#user li:nth-child(4) .img{
+     background-position: -528px 0;
+}

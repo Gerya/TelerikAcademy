@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>String format</title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+	</div>
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    function stringFormat() {
+	        var output = arguments[0];
+	        for (var i = 1; i < arguments.length; i++) {
+	            output = output.replace(new RegExp('\\{' + (i - 1) + '\\}', "gi"), arguments[i]);
+	        }
+	        return output;
+	    }
+	    //String.prototype.stringFormat = stringFormat();
+	    var format = "{0}, {1}, {0} text {2}";
+	    var str = stringFormat(format, 1, "Pesho", "Gosho");
+	    jsConsole.writeLine(str);
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

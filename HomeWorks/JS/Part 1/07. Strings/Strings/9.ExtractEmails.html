@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Extracting all email addresses  </title>
+	<link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="js-console">
+        <p>
+         Lorem Ipsum is simply alabala@mail.bg dummy text of the bzt76@gmail.com printing and s.maunchev@abv.bg. 
+         Lorem Ipsum has p.peshev@gmail.com been the industry's standard ivanov@yahoo.com dummy text ever since the 1500s.
+        </p>
+	</div>
+    <button type="button" onclick="extractEmail()">Extract!</button> 
+    <button type="button" onclick="clearForm()">Clear!</button> 		 
+	<script src="scripts/js-console.js"></script>
+	<script>
+	    var text = "";
+	    var emailArr = [];
+	    var result="";
+	    function extractEmail() {
+	        text = document.getElementsByTagName("p")[0].innerHTML;
+	        emailArr = text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+	        if (emailArr) {
+	            for (var i = 0; i < emailArr.length; i++) {
+	                if (i != 0 && i < emailArr.length) {
+	                    result += ", ";
+	                }
+	                result += emailArr[i];
+	            }
+	        }
+	        jsConsole.writeLine(result);
+	    }
+	    function clearForm() {
+	        jsConsole.clear();
+	    }
+	</script>
+</body>
+</html>

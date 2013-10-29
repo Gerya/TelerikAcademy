@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Draw Graphic</title>
+    <style>
+        #picture
+        {
+            width: 765px;
+            height: 480px;
+        }
+
+        #wrapper
+        {
+            width: 765px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <canvas id="picture" width="765" height="480">This text is displayed if your browser does not support   
+      HTML5 Canvas. 
+        </canvas>
+    </div>
+    <script>
+        var canvas = document.getElementById("picture");
+        var ctx = canvas.getContext("2d");
+
+        //Head
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = "#1f515c";
+        ctx.fillStyle = "#90cad7";
+        drawCircle(ctx, 125, 190, 63);
+        //eyes
+        drawEllipseByCenter(ctx, 85, 180, 24, 15);
+        drawEllipseByCenter(ctx, 135, 180, 24, 15);
+        ctx.fillStyle = "#1f515c";
+        drawEllipseByCenter(ctx, 83, 180, 6, 15);
+        drawEllipseByCenter(ctx, 132, 180, 6, 15);
+        //Lips
+        ctx.lineWidth = 2;
+        halfEllipseOther(ctx, 83, 220, 55, 11);
+        halfEllipseOtherUp(ctx, 83, 220, 55, 11);
+        //nose
+        ctx.beginPath();
+        ctx.moveTo(110, 180);
+        ctx.lineTo(100, 200);
+        ctx.lineTo(110, 200);
+        ctx.stroke();
+        //draw heat
+        ctx.strokeStyle = "black";
+        ctx.fillStyle = "#396693";
+        drawEllipseByCenter(ctx, 125, 143, 160, 30);
+        ctx.fillRect(80, 50, 91, 75);
+        ctx.strokeRect(80, 50, 91, 75);
+        drawEllipseByCenter(ctx, 125, 50, 91, 30);
+        halfEllipseDown(ctx, 80, 124, 91, 30);
+        //Bike
+        ctx.strokeStyle = "#368497";
+        ctx.fillStyle = "#90cad7";
+        ctx.lineWidth = 5;
+        drawCircle(ctx, 65, 417, 60);
+        drawCircle(ctx, 290, 417, 60);
+        ctx.fillStyle = "#fff"
+        drawCircle(ctx, 177, 417, 20);
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(65, 417);
+        ctx.lineTo(177, 417);
+        ctx.lineTo(270, 327);
+        ctx.lineTo(140, 327);
+        ctx.lineTo(65, 417);
+        ctx.moveTo(290, 417);
+        ctx.lineTo(260, 280);
+        ctx.lineTo(290, 240);
+        ctx.moveTo(260, 280);
+        ctx.lineTo(220, 300);
+        ctx.moveTo(177, 417);
+        ctx.lineTo(135, 305);
+        ctx.moveTo(115, 305);
+        ctx.lineTo(155, 305);
+        ctx.moveTo(196, 425);
+        ctx.lineTo(215, 440);
+        ctx.moveTo(160, 404);
+        ctx.lineTo(141, 389);
+        ctx.stroke();
+        //house
+        ctx.strokeStyle = "black";
+        ctx.fillStyle = "#975b5b";
+        ctx.lineWidth = 2;
+        ctx.fillRect(470, 150, 290, 240);
+        ctx.strokeRect(470, 150, 290, 240);
+        //roof
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(470, 150);
+        ctx.lineTo(615, 5);
+        ctx.lineTo(760, 150);
+        ctx.stroke();
+        ctx.fill();
+        ctx.beginPath();
+        ctx.moveTo(710, 120);
+        ctx.lineTo(710, 30);
+        ctx.lineTo(670, 30);
+        ctx.lineTo(670, 120);
+        ctx.stroke();
+        ctx.fill();
+        drawEllipseByCenter(ctx, 690, 30, 40, 15);
+        //door
+        ctx.lineWidth = 2;
+        ctx.strokeRect(490, 315, 80, 75);
+        ctx.lineWidth = 4;
+        halfEllipseUp(ctx, 491, 317, 78, 30);
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(530, 390);
+        ctx.lineTo(530, 293);
+        ctx.stroke();
+        ctx.lineWidth = 4;
+        drawCircle(ctx, 515, 360, 6);
+        drawCircle(ctx, 545, 360, 6);
+        //windows
+        ctx.fillStyle = "black";
+        drawWindow(ctx, 490, 180, 50, 30);
+        drawWindow(ctx, 640, 180, 50, 30);
+        drawWindow(ctx, 640, 280, 50, 30);
+
+        function drawCircle(ctx, x, y, radius) {
+            ctx.beginPath();
+            ctx.arc(x, y, radius, radius, 0, 2 * Math.PI, false);
+            ctx.stroke();
+            ctx.fill();
+        }
+
+        function drawEllipseByCenter(ctx, cx, cy, w, h) {
+            drawEllipse(ctx, cx - w / 2.0, cy - h / 2.0, w, h);
+        }
+
+        function drawEllipse(ctx, x, y, w, h) {
+            var kappa = .5522848,
+                ox = (w / 2) * kappa, // control point offset horizontal
+                oy = (h / 2) * kappa, // control point offset vertical
+                xe = x + w,           // x-end
+                ye = y + h,           // y-end
+                xm = x + w / 2,       // x-middle
+                ym = y + h / 2;       // y-middle
+
+            ctx.beginPath();
+            ctx.moveTo(x, ym);
+            ctx.bezierCurveTo(x, ym - oy, xm - ox, y, xm, y);
+            ctx.bezierCurveTo(xm + ox, y, xe, ym - oy, xe, ym);
+            ctx.bezierCurveTo(xe, ym + oy, xm + ox, ye, xm, ye);
+            ctx.bezierCurveTo(xm - ox, ye, x, ym + oy, x, ym);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
+        }
+
+        function halfEllipseDown(ctx, startX, startY, width, height) {
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.bezierCurveTo(startX, startY + height, startX + width, startY + height, startX + width, startY);
+            ctx.stroke();
+            ctx.fill();
+        }
+
+        function halfEllipseUp(ctx, startX, startY, width, height) {
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.bezierCurveTo(startX, startY - height, startX + width, startY - height, startX + width, startY);
+            ctx.stroke();
+        }
+
+        function halfEllipseOther(ctx, startX, startY, width, height) {
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.bezierCurveTo(startX + 20, startY + height, startX + width, startY + height + 10, startX + width, startY + 10);
+            ctx.stroke();
+        }
+
+        function halfEllipseOtherUp(ctx, startX, startY, width, height) {
+            ctx.beginPath();
+            ctx.moveTo(startX, startY);
+            ctx.bezierCurveTo(startX + 5, startY - height, startX + 15, startY - height, startX + width, startY + 10);
+            ctx.stroke();
+        }
+
+        function drawWindow(ctx, startX, startY, width, height) {
+            ctx.fillRect(startX, startY, width, height);
+            ctx.fillRect(startX + 2 + width, startY, width, height);
+            ctx.fillRect(startX, startY + 2 + height, width, height);
+            ctx.fillRect(startX + 2 + width, startY + 2 + height, width, height);
+        }
+    </script>
+</body>
+</html>

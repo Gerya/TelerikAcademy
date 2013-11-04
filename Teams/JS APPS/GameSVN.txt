@@ -1,1 +1,2 @@
 https://subversion.assembla.com/svn/team-damsin/trunk/
+http://ninjasurvival.antonyjekov.com/
